@@ -3,23 +3,46 @@
 
 
 .warehouse-page {
-
-    padding: 0 0 0 0;
-    
+    display: flex;
+    flex-direction: column;
+   
     &__header {
         background-color: $graphite;
-        padding: 0 4vw 0 4vw;
+        padding: 0 1rem 0 1rem;
      
     }
 
     &__title{
-        // font-size: 1.75rem;
-        line-height: 2.25rem;
-        font-weight: 600;
-        font-size: 8vw;
-
         background-color: $white;
-        padding: 10vw 0 1vw 6vw;
+        padding: 2rem 0 0 1.5rem;
         margin: 0;
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 3.5vw 3.5vw 0 3.5vw;
+
+    }
+
+    &__search-bar {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+
+        border: 0.1rem solid $slate;
+    }
+
+    &__input {
+        border: none;
+
+        &::placeholder {
+            font-weight: 400;
+        }
+
+        &:focus {
+           outline: none;
+        }
     }
 }
