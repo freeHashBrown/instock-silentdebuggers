@@ -1,6 +1,6 @@
 import './App.scss';
 import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
-import Header from '../src/assets/components/Header/Header'
+import Header from '../src/components/Header/Header'
 
 
 function App() {
