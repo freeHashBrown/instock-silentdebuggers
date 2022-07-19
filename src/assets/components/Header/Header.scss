@@ -1,0 +1,56 @@
+@use '../../../styles/partials/breakpoints' as *;
+@use '../../../styles/partials/colors' as *;
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    color: $white;
+    background: $graphite;
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        height: auto;
+        width: 8rem;
+        margin: 1.5rem auto;
+    }
+    &__nav {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0 0 5rem 0;
+
+        &-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            padding: .5rem 0;
+            color: $cloud;
+
+        } :active, :hover {
+            background: $instock-black;
+            border-radius: 30px;
+            color: $white;
+        }
+    }
+    @include tablet {
+        justify-content: space-between;
+        padding: 1.5rem 1rem 5rem;
+
+        &__logo {
+            margin: 0;
+        }
+        &__nav {
+            margin: 0;
+
+            &-warehouses, &-inventory {
+                padding: .75rem 2rem;
+            }
+        }
+    }
+    @include desktop {
+        padding: 1.5rem 5rem 5rem;
+    }
+}
