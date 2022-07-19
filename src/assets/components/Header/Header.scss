@@ -36,6 +36,7 @@
         }
     }
     @include tablet {
+        flex-direction: row;
         justify-content: space-between;
         padding: 1.5rem 1rem 5rem;
 
@@ -45,8 +46,8 @@
         &__nav {
             margin: 0;
 
-            &-warehouses, &-inventory {
-                padding: .75rem 2rem;
+            &-item {
+                padding: .75rem 1.5rem;
             }
         }
     }
