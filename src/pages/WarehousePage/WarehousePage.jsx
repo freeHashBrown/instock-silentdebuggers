@@ -1,21 +1,27 @@
 import React, { Component } from 'react';
 import "./WarehousePage.scss";
+import "../../styles/partials/_typography.scss";
+import searchIcon from "../../assets/icons/search-24px.svg";
 
 
 class WarehousePage extends Component {
     render() {
         return (
-            <main>
-                <header>
-                    Warehouses
-                    <section>
-                        <input type="text" />
-                        <img src="" alt="" />
+            <main className='warehouse-page'>
+                <header className='warehouse-page__header'>
+                    <h1 className='warehouse-page__title'>
+                        Warehouses
+                    </h1>
+                </header>
+                <article className='warehouse-page__top'>
+                    <section className='warehouse-page__search-bar'>
+                        <input type="text" placeholder='Search...' className='warehouse-page__input'/>
+                        <img src={searchIcon} alt="search icon" className='warehouse-page__search-icon'/>
                     </section>
                     <section>
 
                     </section>
-                </header>
+                </article>
             </main>
         );
     }
