@@ -32,7 +32,7 @@ function AddNewWarehouse () {
                         <h2 className='addNewWarehouse__details-heading sub-header'>
                             Contact Details
                         </h2>
-                        <form className='addNewWarehouse__form'>
+                        <form className='addNewWarehouse__form' id='add-form'>
                             <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>Contact Name</label>
                             <input className='addNewWarehouse__input' type='text' placeholder='Contact Name'/>
                             <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>Position</label>
@@ -44,11 +44,11 @@ function AddNewWarehouse () {
                         </form>
                      </section>
                     <section className='addNewWarehouse__button-section'>
-                        <button className='addNewWarehouse__button'>
+                        <button className='addNewWarehouse__button-cancel' type='submit'>
                             Cancel
                         </button>
-                        <button className='addNewWarehouse__button'>
-                            +Add Warehouse
+                        <button className='addNewWarehouse__button-add' type='submit' form='add-form'>
+                            + Add Warehouse
                         </button>
                     </section>
                 </main>

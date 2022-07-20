@@ -36,14 +36,34 @@
         padding: 0rem 1.25rem 1.25rem;
     }
     &__label {
-        padding: .75rem 0 0rem;
+        padding: .75rem 0 .25rem;
     }
     &__input {
         border-radius: 30px;
         border: 1px solid $cloud;
         padding: .5rem .75rem;
-    } ::placeholder {
+    } 
+    ::placeholder {
         font: .688rem 'Titillium Web';
+    }
+    &__button-section {
+        background: $light-grey;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 1.25rem;
+    }
+    &__button-add, &__button-cancel {
+        border-radius: 30px;
+        border: 1px solid $cloud;
+        padding: .45rem .75rem;
+        width: 47%;
+        font: .688rem 'Titillium Web Semibold';
+        color: $white;
+        background: $instock-indigo;
+    }
+    &__button-cancel {
+        color: $slate;
+        background: $white;
     }
 }
 
