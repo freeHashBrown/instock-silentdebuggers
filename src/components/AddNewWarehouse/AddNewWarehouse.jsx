@@ -4,10 +4,15 @@ import backIcon from '../../assets/icons/arrow_back-24px.svg'
 function AddNewWarehouse () {
 
     const handleSubmit = (e) => {
-        e.preventDefault()
-        console.log(e)
+        e.preventDefault();
+
+        for (let i=0; i < 8; i++) {
+            const v = e.target[i].value
+            return;
+        }
+
     }
-    
+
     return (
         <div className='addNewWarehouse'>
             <div className='addNewWarehouse__card'>
@@ -25,14 +30,22 @@ function AddNewWarehouse () {
                                 Warehouse Details
                             </h2>
                             <div className='addNewWarehouse__form-container'>
-                                <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>Warehouse Name</label>
-                                <input className='addNewWarehouse__input' type='text' placeholder='Warehouse Name'/>
-                                <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>Street Address</label>
-                                <input className='addNewWarehouse__input' type='text' placeholder='Street Address'/>
-                                <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>City</label>
-                                <input className='addNewWarehouse__input' type='text' placeholder='City'/>
-                                <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>Country</label>
-                                <input className='addNewWarehouse__input' type='text' placeholder='Country'/>
+                                <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
+                                    Warehouse Name
+                                    <input className='addNewWarehouse__input' type='text' placeholder='Warehouse Name'/>
+                                </label>
+                                <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
+                                    Street Address
+                                    <input className='addNewWarehouse__input' type='text' placeholder='Street Address'/>
+                                </label>
+                                <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
+                                    City
+                                    <input className='addNewWarehouse__input' type='text' placeholder='City'/>
+                                </label>
+                                <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
+                                    Country
+                                    <input className='addNewWarehouse__input' type='text' placeholder='Country'/>
+                                </label>
                             </div>
                         </section>
                         <section className='addNewWarehouse__details-contact'>
@@ -40,14 +53,22 @@ function AddNewWarehouse () {
                                 Contact Details
                             </h2>
                             <div className='addNewWarehouse__form-container'>
-                                <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>Contact Name</label>
-                                <input className='addNewWarehouse__input' type='text' placeholder='Contact Name'/>
-                                <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>Position</label>
-                                <input className='addNewWarehouse__input' type='text' placeholder='Position'/>
-                                <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>Phone Number</label>
-                                <input className='addNewWarehouse__input' type='text' placeholder='Phone Number'/>
-                                <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>Email</label>
-                                <input className='addNewWarehouse__input' type='text' placeholder='Email'/>
+                                <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
+                                    Contact Name
+                                    <input className='addNewWarehouse__input' type='text' placeholder='Contact Name'/>
+                                </label>
+                                <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
+                                    Position
+                                    <input className='addNewWarehouse__input' type='text' placeholder='Position'/>
+                                </label>
+                                <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
+                                    Phone Number
+                                    <input className='addNewWarehouse__input' type='text' placeholder='Phone Number'/>
+                                </label>
+                                <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
+                                    Email
+                                    <input className='addNewWarehouse__input' type='text' placeholder='Email'/>
+                                </label>
                             </div>
                         </section>
                      </form>
