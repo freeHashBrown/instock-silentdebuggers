@@ -1,5 +1,6 @@
 @use '../../styles/partials/typography' as *;
 @use '../../styles/partials/colors' as *;
+@use '../../styles/partials/breakpoints' as *;
 
 .addNewWarehouse {
     padding: 0 1rem;
@@ -10,7 +11,7 @@
         z-index: 1;
         position: relative;
         top: -3.5rem;
-        border-radius: 4px ;
+        border-radius: 3px;
         box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
     }
     &__header {
@@ -20,13 +21,10 @@
         font-size: 1.5rem;
         border-bottom: 1px solid $cloud;
     }
-    &__details {
-
-        &-warehouse{
-            border-bottom: 1px solid $cloud;
-        }
+    &__details-warehouse{
+        border-bottom: 1px solid $cloud;
     }
-    &__details-heading, &__form {
+    &__details-subheading, &__form {
         margin: 0;
         padding: 1rem 1.25rem 0rem;
         display: flex;
@@ -65,8 +63,52 @@
         color: $slate;
         background: $white;
     }
+    @include tablet {
+        &__header {
+            display: flex;
+            justify-content: flex-start;
+            padding: 0 1.75rem 0;
+        }
+        &__details {
+            display: flex;
+            justify-content: center;
+            &-warehouse, &-contact {
+                margin: 1.5rem 0 1.75rem;
+                width: 50%;
+            }
+            &-warehouse {
+                border-right: 1px solid $cloud;
+                border-bottom: none;
+            }
+        }
+        &__details-subheading, &__form {
+            padding: 0 1.75rem 0;
+        }
+        &__button-section {
+            justify-content: flex-end;
+            padding-right: 1.75rem;
+        }
+        &__button-add, &__button-cancel {
+            border-radius: 30px;
+            border: 1px solid $cloud;
+            padding: .45rem .75rem;
+            width: auto;
+            font: .688rem 'Titillium Web Semibold';
+            color: $white;
+            background: $instock-indigo;
+        }
+        &__button-cancel {
+            color: $slate;
+            background: $white;
+            margin-right: 1rem;
+        } 
+    }
 }
 
 .page-header {
     font-size: 1.5rem;
+
+    @include tablet {
+        font-size: 2rem;
+    }
 }

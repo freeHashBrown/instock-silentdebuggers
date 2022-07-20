@@ -7,14 +7,14 @@ function AddNewWarehouse () {
             <div className='addNewWarehouse__card'>
                 <header className='addNewWarehouse__header'>
                     <img src={backIcon} />
-                    <h1 className= 'page-header'>
+                    <h1 className= 'addNewWarehouse__heading page-header'>
                         Add New Warehouse
                     </h1>
                 </header>
 
                 <main className='addNewWarehouse__details'>
                     <section className='addNewWarehouse__details-warehouse'>
-                        <h2 className='addNewWarehouse__details-heading sub-header'>
+                        <h2 className='addNewWarehouse__details-subheading sub-header'>
                             Warehouse Details
                         </h2>
                         <form className='addNewWarehouse__form' id='add-form'>
@@ -29,7 +29,7 @@ function AddNewWarehouse () {
                         </form>
                     </section>
                     <section className='addNewWarehouse__details-contact'>
-                        <h2 className='addNewWarehouse__details-heading sub-header'>
+                        <h2 className='addNewWarehouse__details-subheading sub-header'>
                             Contact Details
                         </h2>
                         <form className='addNewWarehouse__form' id='add-form'>
@@ -43,15 +43,15 @@ function AddNewWarehouse () {
                             <input className='addNewWarehouse__input' type='text' placeholder='Email'/>
                         </form>
                      </section>
-                    <section className='addNewWarehouse__button-section'>
+                </main>
+                <section className='addNewWarehouse__button-section'>
                         <button className='addNewWarehouse__button-cancel' type='submit'>
                             Cancel
                         </button>
                         <button className='addNewWarehouse__button-add' type='submit' form='add-form'>
                             + Add Warehouse
                         </button>
-                    </section>
-                </main>
+                </section>
             </div>
         </div>
     );
