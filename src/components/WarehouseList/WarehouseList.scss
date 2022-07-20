@@ -1,4 +1,5 @@
 @use "../../styles/partials/colors" as *;
+@use "../../styles/partials/breakpoints" as *;
 
 .warehouse-list {
     display: flex;
@@ -8,13 +9,17 @@
     background-color: $light-grey;
 
     &__header {
-        display: flex;
-        justify-content: space-around;
+        display: none;
 
+        @include tablet {
+            display: flex;
+            justify-content: space-around;
+            border-top: none;
+        }
+       
     }
 
     &__box {
         display: flex;
-        // padding: 0 2rem 0 2rem;
     }
 }

@@ -16,7 +16,7 @@ const WarehouseItem = () => {
                         <p className='warehouse-item__data body-medium warehouse-item__data--select'>
                             Manhattan 
                         </p>
-                        <img src={chevron} alt="chevron" className='warehouse-item__icon'/>
+                        <img src={chevron} alt="chevron" className='warehouse-item__chevron'/>
                     </div>
                 </div>
                 <div className='warehouse-item__box'>
@@ -50,7 +50,7 @@ const WarehouseItem = () => {
                         paujla@instock.com
                     </p>
                 </div>
-                <img src={edit} alt="edit" className='warehouse-item__icon warehouse-item__icon--selected'/>
+                <img src={edit} alt="edit" className='warehouse-item__icon warehouse-item__icon--select'/>
             </div>
         </section>
     );

@@ -1,4 +1,6 @@
 @use "../../styles/partials/colors" as *;
+@use "../../styles/partials/breakpoints" as *;
+
 
 .warehouse-item {
     display: flex;
@@ -7,6 +9,10 @@
     background-color: $white;
     justify-content: space-between;
     position: relative;
+
+    @include tablet {
+        border-top: none;
+    }
 
     &__column {
         display: flex;
@@ -54,11 +60,20 @@
         width: 1.125rem;
         height: 1.125rem;
 
-        &--selected {
+        @include tablet {
+            display: none;
+        }
+
+        &--select {
             position: absolute;
             bottom: 1rem;
             right: 1.5rem;
         }
+    }
 
+    &__chevron {
+        width: 1.125rem;
+        height: 1.125rem;
+      
     }
 }
