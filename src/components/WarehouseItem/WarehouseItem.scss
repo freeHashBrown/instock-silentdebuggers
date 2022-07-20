@@ -2,7 +2,42 @@
 
 .warehouse-item {
     display: flex;
-    padding: 0 1rem 0 1rem;
+    padding: 0 2rem 0 2rem;
     border-top: solid 0.1rem $cloud;
     background-color: $white;
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        font-weight: 600;
+        color: $slate;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    &__data {
+        margin: 0;
+        color: $instock-black;
+    }
+
+
+    &__icon {
+        width: 1.125rem;
+        height: 1.125rem;
+
+    }
 }

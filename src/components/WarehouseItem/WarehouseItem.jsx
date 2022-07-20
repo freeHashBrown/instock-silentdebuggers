@@ -9,48 +9,48 @@ const WarehouseItem = () => {
         <section className='warehouse-item'>
             <div className='warehouse-item__column'>
                 <div className='warehouse-item__box'>
-                    <p className='warehouse-item__label table-header'>
+                    <p className='table-header warehouse-item__label'>
                         Warehouse
                     </p>
                     <div className='warehouse-item__bottom'>
-                        <p>
+                        <p className=''>
                             Manhattan 
                         </p>
-                        <img src={chevron} alt="chevron" />
+                        <img src={chevron} alt="chevron" className='warehouse-item__icon'/>
                     </div>
                 </div>
-                <div className='warehouse-item__address'>
-                    <p className='warehouse-item__label'>
+                <div className='warehouse-item__box'>
+                    <p className=' table-header warehouse-item__label'>
                         Address
                     </p>
                     <p className='warehouse-item__data'>
                         503 Broadway, New York, USA
                     </p>
                 </div>
-                <img src={garbage} alt="delete" />
+                <img src={garbage} alt="delete" className='warehouse-item__icon'/>
             </div>
 
             <div className='warehouse-item__column'>
                 <div className='warehouse-item__box'>
-                    <p className='warehouse-item__label'>
+                    <p className='table-header warehouse-item__label'>
                         Contact Name
                     </p>
-                    <p className='warehouse-item__data'>
+                    <p className='warehouse-item__data body-medium'>
                         Parmin Aujla
                     </p>
                 </div>
                 <div className='warehouse-item__box'>
-                    <p className='warehouse-item__label'>
+                    <p className='warehouse-item__label table-header'>
                         Contact Information
                     </p>
-                    <p className='warehouse-item__data'>
+                    <p className='warehouse-item__data body-medium'>
                         +1(629)555-0129
                     </p>
-                    <p className='warehouse-item__data'>
+                    <p className='warehouse-item__data body-medium'>
                         paujla@instock.com
                     </p>
                 </div>
-                <img src={edit} alt="edit" />
+                <img src={edit} alt="edit" className='warehouse-item__icon'/>
             </div>
         </section>
     );
