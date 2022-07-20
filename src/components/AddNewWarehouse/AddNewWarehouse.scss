@@ -1,0 +1,25 @@
+@use '../../styles/partials/colors' as *;
+
+.addNewWarehouse {
+    padding: 0 1rem;
+    background: green;
+    &__top {
+        background: yellow;
+    }
+    &__card {
+        background: yellow;
+    }
+    &__details-heading {
+        margin: 0;
+    }
+    &__header {
+        margin: 0;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+    &__input {
+        border-radius: 30px;
+    }
+}
