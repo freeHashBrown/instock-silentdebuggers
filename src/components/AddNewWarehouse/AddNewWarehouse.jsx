@@ -14,32 +14,32 @@ function AddNewWarehouse () {
 
                 <main className='addNewWarehouse__details'>
                     <section className='addNewWarehouse__details-warehouse'>
-                        <h2 className='addNewWarehouse__details-heading'>
+                        <h2 className='addNewWarehouse__details-heading sub-header'>
                             Warehouse Details
                         </h2>
-                        <form className='addNewWarehouse__form'>
-                            <label className='addNewWarehouse__label' htmlFor='addNewWarehouse__input'>Warehouse Name</label>
+                        <form className='addNewWarehouse__form' id='add-form'>
+                            <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>Warehouse Name</label>
                             <input className='addNewWarehouse__input' type='text' placeholder='Warehouse Name'/>
-                            <label className='addNewWarehouse__label' htmlFor='addNewWarehouse__input'>Street Address</label>
+                            <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>Street Address</label>
                             <input className='addNewWarehouse__input' type='text' placeholder='Street Address'/>
-                            <label className='addNewWarehouse__label' htmlFor='addNewWarehouse__input'>City</label>
+                            <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>City</label>
                             <input className='addNewWarehouse__input' type='text' placeholder='City'/>
-                            <label className='addNewWarehouse__label' htmlFor='addNewWarehouse__input'>Country</label>
+                            <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>Country</label>
                             <input className='addNewWarehouse__input' type='text' placeholder='Country'/>
                         </form>
                     </section>
                     <section className='addNewWarehouse__details-contact'>
-                        <h2 className='addNewWarehouse__details-heading'>
+                        <h2 className='addNewWarehouse__details-heading sub-header'>
                             Contact Details
                         </h2>
                         <form className='addNewWarehouse__form'>
-                            <label className='addNewWarehouse__label' htmlFor='addNewWarehouse__input'>Contact Name</label>
+                            <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>Contact Name</label>
                             <input className='addNewWarehouse__input' type='text' placeholder='Contact Name'/>
-                            <label className='addNewWarehouse__label' htmlFor='addNewWarehouse__input'>Position</label>
+                            <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>Position</label>
                             <input className='addNewWarehouse__input' type='text' placeholder='Position'/>
-                            <label className='addNewWarehouse__label' htmlFor='addNewWarehouse__input'>Phone Number</label>
+                            <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>Phone Number</label>
                             <input className='addNewWarehouse__input' type='text' placeholder='Phone Number'/>
-                            <label className='addNewWarehouse__label' htmlFor='addNewWarehouse__input'>Email</label>
+                            <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>Email</label>
                             <input className='addNewWarehouse__input' type='text' placeholder='Email'/>
                         </form>
                      </section>

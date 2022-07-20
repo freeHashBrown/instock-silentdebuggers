@@ -18,19 +18,32 @@
         justify-content: center;
         margin: 0;
         font-size: 1.5rem;
+        border-bottom: 1px solid $cloud;
     }
     &__details {
-        padding: 0 1.25rem;
+
+        &-warehouse{
+            border-bottom: 1px solid $cloud;
+        }
     }
-    &__details-heading {
+    &__details-heading, &__form {
         margin: 0;
-    }
-    &__form {
+        padding: 1rem 1.25rem 0rem;
         display: flex;
         flex-direction: column;
     }
+    &__form {
+        padding: 0rem 1.25rem 1.25rem;
+    }
+    &__label {
+        padding: .75rem 0 0rem;
+    }
     &__input {
         border-radius: 30px;
+        border: 1px solid $cloud;
+        padding: .5rem .75rem;
+    } ::placeholder {
+        font: .688rem 'Titillium Web';
     }
 }
 
