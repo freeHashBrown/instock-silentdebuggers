@@ -24,7 +24,7 @@ function AddNewWarehouse () {
                 </header>
                 <main className='addNewWarehouse__details'>
                     <form className='addNewWarehouse__forms' onSubmit={handleSubmit} id='form'>
-                        <section className='addNewWarehouse__details-warehouse'>
+                        <div className='addNewWarehouse__details-warehouse'>
                             <h2 className='addNewWarehouse__details-subheading sub-header'>
                                 Warehouse Details
                             </h2>
@@ -46,8 +46,8 @@ function AddNewWarehouse () {
                                     <input className='addNewWarehouse__input' type='text' placeholder='Country'/>
                                 </label>
                             </div>
-                        </section>
-                        <section className='addNewWarehouse__details-contact'>
+                        </div>
+                        <div className='addNewWarehouse__details-contact'>
                             <h2 className='addNewWarehouse__details-subheading sub-header'>
                                 Contact Details
                             </h2>
@@ -69,17 +69,17 @@ function AddNewWarehouse () {
                                     <input className='addNewWarehouse__input' type='text' placeholder='Email'/>
                                 </label>
                             </div>
-                        </section>
+                        </div>
                     </form>
                 </main>
-                <section className='addNewWarehouse__button-section'>
+                <div className='addNewWarehouse__button-container'>
                     <button className='addNewWarehouse__button-cancel button-text' type='submit'>
                         Cancel
                     </button>
                     <button className='addNewWarehouse__button-add button-text' type='submit' form='form'>
                         + Add Warehouse
                     </button>
-                </section>
+                </div>
             </div>
         </div>
     );

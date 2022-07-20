@@ -22,7 +22,6 @@
         border-bottom: 1px solid $cloud;
     }
     &__details-warehouse {
-        margin-top: 4rem;
         border-bottom: 1px solid $cloud;
     }
     &__details-subheading, &__form-container {
@@ -48,16 +47,16 @@
     ::placeholder {
         font: .813rem 'Titillium Web';
     }
-    &__button-section {
+    &__button-container {
         background: $light-grey;
         display: flex;
         justify-content: space-between;
-        padding: 1rem 1.25rem;
+        padding: 1rem 1.5rem;
     }
     &__button-add, &__button-cancel {
         border-radius: 30px;
         border: 1px solid $cloud;
-        padding: .45rem .75rem;
+        padding: .45rem 0rem;
         width: 47%;
         font: .75rem 'Titillium Web Semibold';
         color: $white;
@@ -97,15 +96,18 @@
             }
         }
         &__details-subheading, &__form {
-            padding: 0 2rem 0;
+            padding: 0 2rem .5rem;
+        }
+        &__form-container {
+            padding: 0 2rem .5rem;
         }
         &__label {
-            padding: 2rem 0 0;
+            padding: 1.5rem 0 0;
         }
         &__input {
             padding: .5rem 1rem;
         } 
-        &__button-section {
+        &__button-container {
             justify-content: flex-end;
             padding-right: 2rem;
         }
@@ -136,15 +138,18 @@
             padding-left: 2.5rem;
         }
         &__details-warehouse, &__details-contact {
-            margin-bottom: 3.375rem;
+            margin-bottom: 1.875rem;
         }
         &__details-subheading, &__form {
             padding: 0 2.5rem 0;
         }
+        &__form-container {
+            padding: 0 2.5rem 1.5rem;
+        }
         &__label {
             padding: 2.875rem 0 0;
         }
-        &__button-section {
+        &__button-container {
             justify-content: flex-end;
             padding-right: 2.5rem;
         }
