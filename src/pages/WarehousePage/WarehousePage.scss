@@ -5,6 +5,8 @@
 .warehouse-page {
     display: flex;
     flex-direction: column;
+    position: relative;
+    bottom: 4rem;
 
     &__header {
         background-color: $graphite;
