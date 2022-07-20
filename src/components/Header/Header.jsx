@@ -15,10 +15,10 @@ function Header () {
         <div className='header'>
             <img className='header__logo' src={logo} alt='logo'/>
             <ul className='header__nav'>
-                <li className='header__nav-item' >
+                <li className='header__nav-item button-text'>
                     Warehouses
                 </li>
-                <li className='header__nav-item' >
+                <li className='header__nav-item button-text'>
                     Inventory
                 </li>
             </ul>

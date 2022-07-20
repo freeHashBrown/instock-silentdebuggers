@@ -10,7 +10,7 @@
         background: $white;
         z-index: 1;
         position: relative;
-        top: -3.5rem;
+        top: -4.28rem;
         border-radius: 3px;
         box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
     }
@@ -55,6 +55,7 @@
         border: 1px solid $cloud;
         padding: .45rem .75rem;
         width: 47%;
+        font: .75rem 'Titillium Web Semibold';
         color: $white;
         background: $instock-indigo;
     }
@@ -63,16 +64,24 @@
         background: $white;
     }
     @include tablet {
+        padding: 0 2rem;
+
+        &__card {
+            top: -5.9rem;
+        }
         &__header {
             display: flex;
             justify-content: flex-start;
-            padding: 0 1.75rem 0;
+            padding: 0 2rem 0;
+        }
+        &__heading {
+            margin-top: 2rem;
         }
         &__details {
             display: flex;
             justify-content: center;
             &-warehouse, &-contact {
-                margin: 1.5rem 0 1.75rem;
+                margin: 1.5rem 0;
                 width: 50%;
             }
             &-warehouse {
@@ -81,11 +90,17 @@
             }
         }
         &__details-subheading, &__form {
-            padding: 0 1.75rem 0;
+            padding: 0 2rem 0;
         }
+        &__label {
+            padding: 2rem 0 .25rem;
+        }
+        &__input {
+            padding: .5rem 1rem;
+        } 
         &__button-section {
             justify-content: flex-end;
-            padding-right: 1.75rem;
+            padding-right: 2rem;
         }
         &__button-add, &__button-cancel {
             border-radius: 30px;
@@ -103,12 +118,28 @@
         ::placeholder {
             font-size: .875rem;
         }
+        img {
+            margin-top: 1rem;
+        }
     }
     @include desktop {
-        padding: 0 5rem;
+        padding: 0 8.125rem;
 
-        &__header, &__details-subheading, &__form {
+        &__header {
             padding-left: 2.5rem;
+        }
+        &__details-warehouse, &__details-contact {
+            margin-bottom: 3.375rem;
+        }
+        &__details-subheading, &__form {
+            padding: 0 2.5rem 0;
+        }
+        &__label {
+            padding: 2.875rem 0 .25rem;
+        }
+        &__button-section {
+            justify-content: flex-end;
+            padding-right: 2.5rem;
         }
     }
 }
@@ -121,7 +152,6 @@
     }
 }
 .button-text {
-    font: .75rem 'Titillium Web Semibold';
     @include tablet {
         font-size: .875rem;
     }
