@@ -1,5 +1,5 @@
 import './Header.scss';
-import logo from '../../logo/InStock-Logo.svg'
+import logo from '../../assets/logo/InStock-Logo.svg'
 
 function Header () {
     // const handleClick = (event) => {

@@ -1,5 +1,5 @@
-@use '../../../styles/partials/breakpoints' as *;
-@use '../../../styles/partials/colors' as *;
+@use '../../styles/partials/breakpoints' as *;
+@use '../../styles/partials/colors' as *;
 
 .header {
     display: flex;
@@ -7,6 +7,7 @@
     padding: 0 1rem;
     color: $white;
     background: $graphite;
+    height: 8.5rem;
 
     &__logo {
         display: flex;
