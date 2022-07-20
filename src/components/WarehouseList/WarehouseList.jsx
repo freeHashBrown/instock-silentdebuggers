@@ -4,11 +4,11 @@ import WarehouseItem from '../WarehouseItem/WarehouseItem';
 
 const WarehouseList = () => {
     return (
-        <article>
+        <article className='warehouse-list'>
             <section>
 
             </section>
-    
+            <WarehouseItem/>
         </article>
     );
 };

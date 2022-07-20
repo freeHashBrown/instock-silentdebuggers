@@ -1,0 +1,9 @@
+@use "../../styles/partials/colors" as *;
+
+.warehouse-list {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 1rem 0 1rem;
+    background-color: $light-grey;
+}

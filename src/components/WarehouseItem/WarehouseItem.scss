@@ -1,0 +1,8 @@
+@use "../../styles/partials/colors" as *;
+
+.warehouse-item {
+    display: flex;
+    padding: 0 1rem 0 1rem;
+    border-top: solid 0.1rem $cloud;
+    background-color: $white;
+}
