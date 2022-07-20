@@ -45,10 +45,10 @@ function AddNewWarehouse () {
                      </section>
                 </main>
                 <section className='addNewWarehouse__button-section'>
-                        <button className='addNewWarehouse__button-cancel' type='submit'>
+                        <button className='addNewWarehouse__button-cancel button-text' type='submit'>
                             Cancel
                         </button>
-                        <button className='addNewWarehouse__button-add' type='submit' form='add-form'>
+                        <button className='addNewWarehouse__button-add button-text' type='submit' form='add-form'>
                             + Add Warehouse
                         </button>
                 </section>

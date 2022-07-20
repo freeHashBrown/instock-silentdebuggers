@@ -42,7 +42,7 @@
         padding: .5rem .75rem;
     } 
     ::placeholder {
-        font: .688rem 'Titillium Web';
+        font: .813rem 'Titillium Web';
     }
     &__button-section {
         background: $light-grey;
@@ -55,7 +55,6 @@
         border: 1px solid $cloud;
         padding: .45rem .75rem;
         width: 47%;
-        font: .688rem 'Titillium Web Semibold';
         color: $white;
         background: $instock-indigo;
     }
@@ -93,7 +92,6 @@
             border: 1px solid $cloud;
             padding: .45rem .75rem;
             width: auto;
-            font: .688rem 'Titillium Web Semibold';
             color: $white;
             background: $instock-indigo;
         }
@@ -101,7 +99,17 @@
             color: $slate;
             background: $white;
             margin-right: 1rem;
-        } 
+        }
+        ::placeholder {
+            font-size: .875rem;
+        }
+    }
+    @include desktop {
+        padding: 0 5rem;
+
+        &__header, &__details-subheading, &__form {
+            padding-left: 2.5rem;
+        }
     }
 }
 
@@ -110,5 +118,11 @@
 
     @include tablet {
         font-size: 2rem;
+    }
+}
+.button-text {
+    font: .75rem 'Titillium Web Semibold';
+    @include tablet {
+        font-size: .875rem;
     }
 }
