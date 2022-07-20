@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import "./WarehouseList.scss";
+import WarehouseItem from '../WarehouseItem/WarehouseItem';
 
-class WarehouseList extends Component {
-    render() {
-        return (
-            <article>
-                <section>
-                </section>
+const WarehouseList = () => {
+    return (
+        <article>
+            <section>
 
-            </article>
-        );
-    }
-}
+            </section>
+    
+        </article>
+    );
+};
 
 export default WarehouseList;
