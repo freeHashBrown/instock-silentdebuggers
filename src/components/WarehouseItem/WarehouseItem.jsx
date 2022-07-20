@@ -13,7 +13,7 @@ const WarehouseItem = () => {
                         Warehouse
                     </p>
                     <div className='warehouse-item__bottom'>
-                        <p className=''>
+                        <p className='warehouse-item__data body-medium warehouse-item__data--select'>
                             Manhattan 
                         </p>
                         <img src={chevron} alt="chevron" className='warehouse-item__icon'/>
@@ -23,7 +23,7 @@ const WarehouseItem = () => {
                     <p className=' table-header warehouse-item__label'>
                         Address
                     </p>
-                    <p className='warehouse-item__data'>
+                    <p className='warehouse-item__data body-medium'>
                         503 Broadway, New York, USA
                     </p>
                 </div>
@@ -50,7 +50,7 @@ const WarehouseItem = () => {
                         paujla@instock.com
                     </p>
                 </div>
-                <img src={edit} alt="edit" className='warehouse-item__icon'/>
+                <img src={edit} alt="edit" className='warehouse-item__icon warehouse-item__icon--selected'/>
             </div>
         </section>
     );

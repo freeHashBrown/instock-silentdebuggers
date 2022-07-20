@@ -2,42 +2,63 @@
 
 .warehouse-item {
     display: flex;
-    padding: 0 2rem 0 2rem;
+    padding: 1rem 0rem 1rem 0rem;
     border-top: solid 0.1rem $cloud;
     background-color: $white;
+    justify-content: space-between;
+    position: relative;
 
     &__column {
         display: flex;
         flex-direction: column;
         width: 50%;
+        padding: 0 1rem 0 1rem;
+        
     }
 
     &__bottom {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: 5rem;
+        
     }
 
     &__box {
         display: flex;
         flex-direction: column;
+        margin-bottom: 1rem;
     }
 
     &__label {
         font-weight: 600;
         color: $slate;
         text-transform: uppercase;
-        margin: 0;
+        margin: 0 0 0.3rem 0;
     }
 
     &__data {
         margin: 0;
         color: $instock-black;
+        width: 7rem;
+
+        &--select {
+            color: $instock-indigo;
+            font-weight: 600;
+        }
     }
 
 
     &__icon {
         width: 1.125rem;
         height: 1.125rem;
+
+        &--selected {
+            position: absolute;
+            bottom: 1rem;
+            right: 1.5rem;
+        }
 
     }
 }
