@@ -18,9 +18,9 @@ class WarehousePage extends Component {
                         <input type="text" placeholder='Search...' className='warehouse-page__input label-text'/>
                         <img src={searchIcon} alt="search icon" className='warehouse-page__search-icon'/>
                     </section>
-                    <section>
-
-                    </section>
+                        <button className='warehouse-page__button button-text'>
+                            + Add New Warehouse
+                        </button>
                 </article>
             </main>
         );
