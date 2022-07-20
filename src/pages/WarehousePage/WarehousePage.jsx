@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "./WarehousePage.scss";
 import "../../styles/partials/_typography.scss";
 import searchIcon from "../../assets/icons/search-24px.svg";
+import WarehouseList from '../../components/WarehouseList/WarehouseList';
 
 
 class WarehousePage extends Component {
@@ -22,6 +23,7 @@ class WarehousePage extends Component {
                             + Add New Warehouse
                         </button>
                 </article>
+                <WarehouseList/>
             </main>
         );
     }
