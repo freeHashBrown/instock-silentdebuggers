@@ -31,20 +31,20 @@ function AddNewWarehouse () {
                             <div className='addNewWarehouse__form-container'>
                                 <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
                                     Warehouse Name
+                                    <input className='addNewWarehouse__input' type='text' placeholder='Warehouse Name'/>
                                 </label>
-                                <input className='addNewWarehouse__input' type='text' placeholder='Warehouse Name'/>
                                 <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
                                     Street Address
+                                    <input className='addNewWarehouse__input' type='text' placeholder='Street Address'/>
                                 </label>
-                                <input className='addNewWarehouse__input' type='text' placeholder='Street Address'/>
                                 <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
                                     City
+                                    <input className='addNewWarehouse__input' type='text' placeholder='City'/>
                                 </label>
-                                <input className='addNewWarehouse__input' type='text' placeholder='City'/>
                                 <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
                                     Country
+                                    <input className='addNewWarehouse__input' type='text' placeholder='Country'/>
                                 </label>
-                                <input className='addNewWarehouse__input' type='text' placeholder='Country'/>
                             </div>
                         </section>
                         <section className='addNewWarehouse__details-contact'>
@@ -54,20 +54,20 @@ function AddNewWarehouse () {
                             <div className='addNewWarehouse__form-container'>
                                 <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
                                     Contact Name
+                                    <input className='addNewWarehouse__input' type='text' placeholder='Contact Name'/>
                                 </label>
-                                <input className='addNewWarehouse__input' type='text' placeholder='Contact Name'/>
                                 <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
                                     Position
+                                    <input className='addNewWarehouse__input' type='text' placeholder='Position'/>
                                 </label>
-                                <input className='addNewWarehouse__input' type='text' placeholder='Position'/>
                                 <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
                                     Phone Number
+                                    <input className='addNewWarehouse__input' type='text' placeholder='Phone Number'/>
                                 </label>
-                                <input className='addNewWarehouse__input' type='text' placeholder='Phone Number'/>
                                 <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
                                     Email
+                                    <input className='addNewWarehouse__input' type='text' placeholder='Email'/>
                                 </label>
-                                <input className='addNewWarehouse__input' type='text' placeholder='Email'/>
                             </div>
                         </section>
                     </form>
