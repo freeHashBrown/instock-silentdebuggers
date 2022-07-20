@@ -1,18 +1,28 @@
+@use '../../styles/partials/typography' as *;
 @use '../../styles/partials/colors' as *;
 
 .addNewWarehouse {
     padding: 0 1rem;
-    background: green;
-    &__top {
-        background: yellow;
-    }
+    background: $light-grey;
+
     &__card {
-        background: yellow;
-    }
-    &__details-heading {
-        margin: 0;
+        background: $white;
+        z-index: 1;
+        position: relative;
+        top: -3.5rem;
+        border-radius: 4px ;
+        box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
     }
     &__header {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        font-size: 1.5rem;
+    }
+    &__details {
+        padding: 0 1.25rem;
+    }
+    &__details-heading {
         margin: 0;
     }
     &__form {
@@ -22,4 +32,8 @@
     &__input {
         border-radius: 30px;
     }
+}
+
+.page-header {
+    font-size: 1.5rem;
 }
