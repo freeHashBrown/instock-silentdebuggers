@@ -3,13 +3,14 @@ import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom
 import Header from '../src/components/Header/Header'
 import AddNewWarehouse from '../src/components/AddNewWarehouse/AddNewWarehouse';
 import WarehouseDetails from './components/WarehouseDetails/WarehouseDetails';
+import DeleteWarehouse from './components/DeleteWarehouse/DeleteWarehouse';
 
 
 function App() {
   return (
     <Router>
       <Header />
-      <AddNewWarehouse />
+      <DeleteWarehouse />
       <Switch>
         <Redirect from='/' to= '/warehouses'/>
         <Route path= '/warehouses'/>
