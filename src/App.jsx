@@ -5,6 +5,8 @@ import AddNewWarehouse from '../src/components/AddNewWarehouse/AddNewWarehouse';
 import WarehouseDetails from './components/WarehouseDetails/WarehouseDetails';
 import AddNewInventory from './components/AddNewInventory/AddNewInventory';
 
+import DeleteInventory from './components/DeleteInventory/DeleteInventory';
+import DeleteWarehouse from './components/DeleteWarehouse/DeleteWarehouse';
 
 
 function App() {
@@ -15,7 +17,7 @@ function App() {
       <Switch>
         <Redirect from='/' to= '/warehouses'/>
         <Route path= '/warehouses'/>
-        <Route path= '/warehouses/:warehouseId'/>
+        <Route path= '/warehouses/:warehouseId' component={WarehouseDetails}/>
         <Route path='/inventory' />
         <Route path='/inventory/:inventoryId' />
       </Switch>
