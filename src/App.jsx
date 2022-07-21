@@ -14,13 +14,13 @@ function App() {
     <Router>
       <Header />
       {/* <AddNewInventory/> */}
-      <DeleteInventory/>
+      {/* <DeleteInventory/> */}
       <Switch>
-        {/* <Redirect from='/'/>
-        <Route path= '/warehouses'/>
+        <Redirect from='/' to='/warehouses' />
+        <Route path= '/warehouses' component/>
         <Route path= '/warehouses/:warehouseId' component={WarehouseDetails}/>
         <Route path='/inventory' />
-        <Route path='/inventory/:inventoryId' /> */}
+        <Route path='/inventory/:inventoryId' />
       </Switch>
     </Router>
   );
