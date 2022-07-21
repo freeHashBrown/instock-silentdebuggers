@@ -7,13 +7,12 @@ function AddNewWarehouse () {
         e.preventDefault();
 
         for (let i=0; i < 8; i++) {
-            const v = e.target[i].value
-            if (!v) {
+            const formInputs = e.target[i].value
+            if (!formInputs) {
                 e.target[i].nextSibling.classList.remove('addNewWarehouse__input-error--hidden')
                 e.target[i].nextSibling.classList.add('addNewWarehouse__input-error')
             }
         }
-
     }
 
     return (
