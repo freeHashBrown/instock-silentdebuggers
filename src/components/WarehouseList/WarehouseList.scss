@@ -13,14 +13,22 @@
 
         @include tablet {
             display: flex;
-            justify-content: space-around;
+            // justify-content: space-between;
             border-top: none;
+            // padding: 0 0 0 2rem;
+            justify-content: space-evenly;
         }
        
     }
 
     &__box {
         display: flex;
+        width: 8rem;
+        align-items: center;
     }
-    display: none;
+    
+    &__icon {
+        width: 1.125rem;
+        height: 1.125rem;
+    }
 }

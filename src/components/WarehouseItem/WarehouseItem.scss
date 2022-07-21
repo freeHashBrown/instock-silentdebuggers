@@ -4,22 +4,71 @@
 
 .warehouse-item {
     display: flex;
-    padding: 1rem 0rem 1rem 0rem;
+    flex-wrap: wrap;
+    padding: 1rem 0rem 1rem 2rem;
     border-top: solid 0.1rem $cloud;
     background-color: $white;
-    justify-content: space-between;
+    justify-content: space-evenly;
     position: relative;
 
     @include tablet {
         border-top: none;
+        flex-direction: row;
+        justify-content: unset;
+        
     }
 
-    &__column {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        padding: 0 1rem 0 1rem;
+    
+
+    // &__column {
+    //     display: flex;
+    //     flex-direction: column;
+    //     width: 50%;
+    //     padding: 0 1rem 0 1rem;
+
+    //     @include tablet {
+    //         flex-direction: row;
+    //         padding: 0 1rem 0 0;
+    //         justify-content: space-between;
+    //         width: 60%;
+
+    //     }
+
+    //     &--select {
+    //         @include tablet {
+    //             width: 40%;
+    //             justify-content: space-between;
+    //             padding: 0 6rem 0 2.7rem;
+    //         }
+    //     }
         
+    // }
+
+    &__column {
+        @include tablet {
+            display: flex;
+            // justify-content: space-evenly;
+            width: 66%;
+            justify-content: space-evenly;
+        }
+               &--select {
+            @include tablet {
+                width: 34%;
+                justify-content: space-between;
+              
+            }
+        }
+    }
+
+    &__tablet-button {
+        display: none;
+
+        @include tablet {
+            width: 1.125rem;
+            height: 1.125rem;
+            display: unset;
+            margin: 0 1.3rem 0 0rem;
+        }
     }
 
     &__bottom {
@@ -35,6 +84,31 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 1rem;
+
+        @include tablet {
+            // padding: 0 1rem 0 1rem;
+            // margin: 0 1rem 0 0;
+            // position: relative;
+            // right: 1rem;
+            width: 7rem;
+           
+        }
+
+        &--select {
+            flex-direction: row;
+        }
+
+        // &--select-one {
+        //     @include tablet {
+        //         padding-right: -6rem;
+        //     }
+        // }
+
+        // &--select-two {
+        //     @include tablet {
+        //         padding-left: 6rem;
+        //     }
+        // }
     }
 
     &__label {
@@ -42,6 +116,10 @@
         color: $slate;
         text-transform: uppercase;
         margin: 0 0 0.3rem 0;
+
+        @include tablet {
+            display: none;
+        }
     }
 
     &__data {
