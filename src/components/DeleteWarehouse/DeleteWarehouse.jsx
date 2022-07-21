@@ -5,7 +5,7 @@ function DeleteWarehouse() {
     return (
         <div className='deleteWarehouse'>
             <div className='deleteWarehouse__close-icon'>
-                <img src={closeButton}/>
+                <img src={closeButton} alt='x icon'/>
             </div>
             <div className='deleteWarehouse__text-container'>
                 <h1 className='deleteWarehouse__heading page-header'>
