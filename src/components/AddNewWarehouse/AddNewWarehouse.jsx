@@ -17,7 +17,7 @@ function AddNewWarehouse () {
         <div className='addNewWarehouse'>
             <div className='addNewWarehouse__card'>
                 <header className='addNewWarehouse__header'>
-                    <img className='addNewWarehouse__back-icon' src={backIcon} />
+                    <img className='addNewWarehouse__back-icon' src={backIcon} alt='left arrow'/>
                     <h1 className= 'addNewWarehouse__heading page-header'>
                         Add New Warehouse
                     </h1>
@@ -32,18 +32,22 @@ function AddNewWarehouse () {
                                 <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
                                     Warehouse Name
                                     <input className='addNewWarehouse__input' type='text' placeholder='Warehouse Name'/>
+                                    <label className= 'addNewWarehouse__input-error'>This field is required</label>
                                 </label>
                                 <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
                                     Street Address
                                     <input className='addNewWarehouse__input' type='text' placeholder='Street Address'/>
+                                    <label className= 'addNewWarehouse__input-error'>This field is required</label>
                                 </label>
                                 <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
                                     City
                                     <input className='addNewWarehouse__input' type='text' placeholder='City'/>
+                                    <label className= 'addNewWarehouse__input-error'>This field is required</label>
                                 </label>
                                 <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
                                     Country
                                     <input className='addNewWarehouse__input' type='text' placeholder='Country'/>
+                                    <label className= 'addNewWarehouse__input-error'>This field is required</label>
                                 </label>
                             </div>
                         </div>
@@ -55,18 +59,22 @@ function AddNewWarehouse () {
                                 <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
                                     Contact Name
                                     <input className='addNewWarehouse__input' type='text' placeholder='Contact Name'/>
+                                    <label className= 'addNewWarehouse__input-error'>This field is required</label>
                                 </label>
                                 <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
                                     Position
                                     <input className='addNewWarehouse__input' type='text' placeholder='Position'/>
+                                    <label className= 'addNewWarehouse__input-error'>This field is required</label>
                                 </label>
                                 <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
                                     Phone Number
                                     <input className='addNewWarehouse__input' type='text' placeholder='Phone Number'/>
+                                    <label className= 'addNewWarehouse__input-error'>This field is required</label>
                                 </label>
                                 <label className='addNewWarehouse__label label-text' htmlFor='addNewWarehouse__input'>
                                     Email
                                     <input className='addNewWarehouse__input' type='text' placeholder='Email'/>
+                                    <label className= 'addNewWarehouse__input-error'>This field is required</label>
                                 </label>
                             </div>
                         </div>

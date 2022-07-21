@@ -43,7 +43,15 @@
         border: 1px solid $cloud;
         padding: .5rem .75rem;
         margin-top: .25rem;
-    } 
+    }
+    &__input-error {
+        font-size: .75rem;
+        font-weight: 400;
+        padding-left: 1rem;
+        color: $red;
+        background: url('../../assets/icons/error-24px.svg') no-repeat 0% 50%;
+        background-size: .9rem;
+    }
     ::placeholder {
         font: .813rem 'Titillium Web';
     }
