@@ -15,6 +15,10 @@ function AddNewWarehouse () {
         }
     }
 
+    const handleClick = () => {
+        // props.props.history.push('/');
+    }
+
     return (
         <div className='addNewWarehouse'>
             <div className='addNewWarehouse__card'>
@@ -83,7 +87,7 @@ function AddNewWarehouse () {
                     </form>
                 </main>
                 <div className='addNewWarehouse__button-container'>
-                    <button className='addNewWarehouse__button-cancel button-text' type='submit'>
+                    <button className='addNewWarehouse__button-cancel button-text' type='submit' onClick={handleClick}>
                         Cancel
                     </button>
                     <button className='addNewWarehouse__button-add button-text' type='submit' form='form'>
