@@ -13,13 +13,14 @@ function App() {
   return (
     <Router>
       <Header />
-      <AddNewInventory/>
+      {/* <AddNewInventory/> */}
+      <DeleteInventory/>
       <Switch>
-        <Redirect from='/' to= '/warehouses'/>
+        {/* <Redirect from='/'/>
         <Route path= '/warehouses'/>
         <Route path= '/warehouses/:warehouseId' component={WarehouseDetails}/>
         <Route path='/inventory' />
-        <Route path='/inventory/:inventoryId' />
+        <Route path='/inventory/:inventoryId' /> */}
       </Switch>
     </Router>
   );
