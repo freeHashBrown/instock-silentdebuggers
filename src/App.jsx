@@ -10,7 +10,6 @@ function App() {
   return (
     <Router>
       <Header />
-      <DeleteInventory />
       <Switch>
         <Redirect from='/' to= '/warehouses'/>
         <Route path= '/warehouses'/>
