@@ -57,7 +57,9 @@ function AddNewInventory() {
                                 </label>
                                 <label className='addNewInventory__label label-text' htmlFor='addNewInventory__input'>
                                     Warehouse
-                                    <input className='addNewInventory__input' type='text' placeholder='Please select'/>
+                                    <select className='addNewInventory__input-dropdown' type='text' placeholder='Please select'>
+                                        <option>test</option>
+                                    </select>
                                 </label>
                             </div>
                         </div>

@@ -44,7 +44,7 @@
         display: flex;
         flex-direction: column;
     }
-    &__input, &__input-description {
+    &__input, &__input-description, &__input-dropdown {
         border-radius: 20px;
         border: 1px solid $cloud;
         padding: .5rem 1rem;
@@ -52,6 +52,12 @@
     }
     &__input-description {
         padding-bottom: 5.75rem;
+    }
+    &__input-dropdown {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        padding-right: 1.5rem;
+        background: url('../../assets/icons/arrow_drop_down-24px.svg') no-repeat 92% 50%;
     }
     ::placeholder {
         font: .813rem 'Titillium Web';
