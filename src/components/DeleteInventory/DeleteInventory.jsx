@@ -5,7 +5,7 @@ function DeleteInventory() {
     return (
         <div className='deleteInventory'>
             <div className='deleteInventory__close-icon'>
-                <img src={closeButton}/>
+                <img src={closeButton} alt='x icon'/>
             </div>
             <div className='deleteInventory__text-container'>
                 <h1 className='deleteInventory__heading page-header'>
