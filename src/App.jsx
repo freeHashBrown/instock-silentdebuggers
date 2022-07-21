@@ -3,17 +3,22 @@ import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom
 import Header from '../src/components/Header/Header'
 import AddNewWarehouse from '../src/components/AddNewWarehouse/AddNewWarehouse';
 import WarehouseDetails from './components/WarehouseDetails/WarehouseDetails';
+import AddNewInventory from './components/AddNewInventory/AddNewInventory';
+
+import DeleteInventory from './components/DeleteInventory/DeleteInventory';
+import DeleteWarehouse from './components/DeleteWarehouse/DeleteWarehouse';
 
 
 function App() {
   return (
     <Router>
       <Header />
-      <AddNewWarehouse />
+      {/* <AddNewInventory/> */}
+      {/* <DeleteInventory/> */}
       <Switch>
-        <Redirect from='/' to= '/warehouses'/>
-        <Route path= '/warehouses'/>
-        <Route path= '/warehouses/:warehouseId'/>
+        <Redirect from='/' to='/warehouses' />
+        <Route path= '/warehouses' component/>
+        <Route path= '/warehouses/:warehouseId' component={WarehouseDetails}/>
         <Route path='/inventory' />
         <Route path='/inventory/:inventoryId' />
       </Switch>
