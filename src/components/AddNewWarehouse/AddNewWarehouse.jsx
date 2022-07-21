@@ -17,7 +17,7 @@ function AddNewWarehouse () {
         <div className='addNewWarehouse'>
             <div className='addNewWarehouse__card'>
                 <header className='addNewWarehouse__header'>
-                    <img src={backIcon} />
+                    <img className='addNewWarehouse__back-icon' src={backIcon} />
                     <h1 className= 'addNewWarehouse__heading page-header'>
                         Add New Warehouse
                     </h1>

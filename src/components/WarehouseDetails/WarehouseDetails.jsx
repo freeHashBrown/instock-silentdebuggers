@@ -6,7 +6,7 @@ import SortLogo from '../../assets/icons/sort-24px.svg'
 
 function WarehouseDetails() {
     return (
-        <section>
+        <section className='warehouse-wrapper'>
             <div className='warehouse'>
                 <div className='warehouse__header'>
                     <div className='warehouse__header-container'>
