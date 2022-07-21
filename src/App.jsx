@@ -13,10 +13,10 @@ function App() {
       <Switch>
         <Redirect from='/' to= '/warehouses'/>
         <Route path= '/warehouses'/>
-        <Route path= '/warehouses/:warehouseId'/>
+        <Route path= '/warehouses/:warehouseId' component={WarehouseDetails}/>
         <Route path='/inventory' />
         <Route path='/inventory/:inventoryId' />
-      </Switch> */
+      </Switch> 
     </Router>
   );
 }
