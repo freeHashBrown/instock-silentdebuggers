@@ -1,13 +1,16 @@
 import './App.scss';
 import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
+import Header from '../src/components/Header/Header'
+import AddNewWarehouse from '../src/components/AddNewWarehouse/AddNewWarehouse';
+import WarehouseDetails from './components/WarehouseDetails/WarehouseDetails';
 import WarehousePage from './pages/WarehousePage/WarehousePage';
-import Header from './components/Header/Header'
 
 
 function App() {
   return (
     <Router>
       <Header />
+      {/* <AddNewWarehouse /> */}
       <Switch>
         {/* <Redirect from='/' to= '/warehouses'/> */}
         <Route path= '/warehouses' component= {WarehousePage}/>
