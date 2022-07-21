@@ -16,7 +16,7 @@ function App() {
         <Route path= '/warehouses/:warehouseId'/>
         <Route path='/inventory' />
         <Route path='/inventory/:inventoryId' />
-      </Switch> */
+      </Switch>
     </Router>
   );
 }

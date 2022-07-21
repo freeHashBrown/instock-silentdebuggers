@@ -52,6 +52,9 @@
         background: url('../../assets/icons/error-24px.svg') no-repeat 0% 50%;
         background-size: .9rem;
     }
+    &__input-error--hidden {
+        display: none;
+    }
     ::placeholder {
         font: .813rem 'Titillium Web';
     }
