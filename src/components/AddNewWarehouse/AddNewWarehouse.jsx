@@ -14,18 +14,6 @@ function AddNewWarehouse () {
                 e.target[i].nextSibling.classList.add('addNewWarehouse__input-error')
             } else {
                 e.target[i].nextSibling.classList.add('addNewWarehouse__input-error--hidden');
-                // axios.post(`http://localhost:8080/warehouses`, {
-                //     name: e.target[0].value,
-                //     address: e.target[1].value,
-                //     city: e.target[2].value,
-                //     country: e.target[3].value,
-                //     contactName: e.target[4].value,
-                //     position: e.target[5].value,
-                //     phone: e.target[6].value,
-                //     email: e.target[7].value
-                    
-                // })
-                //     .catch((error) => {'Error uploading'})
             }
         }
         if (!e.target[0].value || !e.target[1].value || !e.target[2].value || !e.target[3].value || !e.target[4].value || !e.target[5].value || !e.target[6].value || !e.target[7].value) {
