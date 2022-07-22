@@ -4,7 +4,11 @@ import chevron from "../../assets/icons/chevron_right-24px.svg";
 import garbage from "../../assets/icons/delete_outline-24px.svg";
 import edit from "../../assets/icons/edit-24px.svg";
 
-const WarehouseItem = () => {
+const WarehouseItem = ({ warehouse }) => {
+    
+    console.log(warehouse);
+    
+    
     return (
         <section className='warehouse-item'>
             <div className='warehouse-item__column warehouse-item__column--select'>
@@ -14,7 +18,7 @@ const WarehouseItem = () => {
                     </p>
                     <div className='warehouse-item__bottom'>
                         <p className='warehouse-item__data body-medium warehouse-item__data--select'>
-                            Manhattan
+                            {warehouse.city}
                         </p>
                         <img src={chevron} alt="chevron" className='warehouse-item__chevron'/>
                     </div>
@@ -24,7 +28,7 @@ const WarehouseItem = () => {
                         Address
                     </p>
                     <p className='warehouse-item__data body-medium'>
-                        503 Broadway, New York, USA
+                        {warehouse.address}
                     </p>
                 </div>
                 <img src={garbage} alt="delete" className='warehouse-item__icon'/>
@@ -37,7 +41,7 @@ const WarehouseItem = () => {
                         Contact Name
                     </p>
                     <p className='warehouse-item__data body-medium'>
-                        Parmin Aujla
+                        {warehouse.contact.name}
                     </p>
                 </div>
                 <div className='warehouse-item__box'>
@@ -45,10 +49,10 @@ const WarehouseItem = () => {
                         Contact Information
                     </p>
                     <p className='warehouse-item__data body-medium'>
-                        +1(629)555-0129
+                        {warehouse.contact.phone}
                     </p>
                     <p className='warehouse-item__data body-medium'>
-                        paujla@instock.com
+                        {warehouse.contact.email}
                     </p>
                 </div>
                 <img src={edit} alt="edit" className='warehouse-item__icon warehouse-item__icon--select'/>
