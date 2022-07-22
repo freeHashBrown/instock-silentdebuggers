@@ -2,6 +2,45 @@ import './AddNewInventory.scss';
 import backIcon from '../../assets/icons/arrow_back-24px.svg';
 
 function AddNewInventory() {
+    
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(e)
+        for (let i = 0; i < 3; i++) {
+            const formInputs = e.target[i].value;
+            
+            if (!formInputs) {
+                e.target[i].nextSibling.classList.remove('addNewInventory__input-error--hidden');
+                e.target[i].nextSibling.classList.add('addNewInventory__input-error');
+            } else {
+                e.target[i].nextSibling.classList.add('addNewInventory__input-error--hidden');
+            }
+        }
+        for(let k = 5; k < 7; k++) {
+            const quantity = e.target[k].value;
+
+            if (!quantity) {
+                e.target[k].nextSibling.classList.remove('addNewInventory__input-error--hidden');
+                e.target[k].nextSibling.classList.add('addNewInventory__input-error');
+            } else {
+                e.target[k].nextSibling.classList.add('addNewInventory__input-error--hidden');
+            }
+        }
+        const radioOne = e.target[3].checked
+        const radioTwo = e.target[4].checked
+        const error = document.getElementById('radio-error')
+
+        if (!radioOne && !radioTwo) {
+            error.classList.add('addNewInventory__input-error');
+            error.classList.remove('addNewInventory__input-error--hidden');
+        } else {
+            error.classList.add('addNewInventory__input-error--hidden');
+            error.classList.remove('addNewInventory__input-error')
+        }
+
+    }
+
+
     return (
         <div className='addNewInventory'>
             <div className='addNewInventory__card'>
@@ -12,7 +51,7 @@ function AddNewInventory() {
                     </h1>
                 </header>
                 <main className='addNewInventory__details'>
-                    <form className='addNewInventory__forms' id='form'>
+                    <form className='addNewInventory__forms' id='form' onSubmit={handleSubmit}>
                         <div className='addNewInventory__details-item'>
                             <h2 className='addNewInventory__details-subheading sub-header'>
                                 Item Details
@@ -21,14 +60,20 @@ function AddNewInventory() {
                                 <label className='addNewInventory__label label-text' htmlFor='addNewInventory__input'>
                                     Item Name
                                     <input className='addNewInventory__input' type='text' placeholder='Item Name'/>
+                                    <label className= 'addNewInventory__input-error--hidden'>This field is required</label>
                                 </label>
                                 <label className='addNewInventory__label label-text' htmlFor='addNewInventory__input'>
                                     Description
                                     <input className='addNewInventory__input-description' type='textarea' placeholder='Please enter a brief item description...'/>
+                                    <label className= 'addNewInventory__input-error--hidden'>This field is required</label>
                                 </label>
                                 <label className='addNewInventory__label label-text' htmlFor='addNewInventory__input'>
                                     Category
-                                    <input className='addNewInventory__input' type='text' placeholder='Please select'/>
+                                    <select className='addNewInventory__input-dropdown' type='text' placeholder='Please select'>
+                                        <option value='' selected disabled hidden>Please select</option>
+                                        <option value='test'>test</option>
+                                    </select>
+                                    <label className= 'addNewInventory__input-error--hidden'>This field is required</label>
                                 </label>
                             </div>
                         </div>
@@ -41,25 +86,28 @@ function AddNewInventory() {
                                     Status
                                     <div className='addNewInventory__selection-container'>
                                         <div className='addNewInventory__selection-option'>
-                                            <input type='radio' value='in-stock' id='in-stock'/>
+                                            <input type='radio' value='In Stock' id='in-stock' name='stock'/>
                                             <label className='addNewInventory__selection-label' htmlFor='in-stock'>In stock</label>
                                         </div>
                                         <div className='addNewInventory__selection-option'>
-                                            <input type='radio' value='out-of-stock' id='out-of-stock'/>
+                                            <input type='radio' value='Out of Stock' id='out-of-stock' name='stock'/>
                                             <label className='addNewInventory__selection-label' htmlFor='out-of-stock'>Out of stock</label>
                                         </div>
-                                        
                                     </div>
+                                    <label className= 'addNewInventory__input-error--hidden' id='radio-error'>This field is required</label>
                                 </label>
-                                <label className='addNewInventory__label label-text' htmlFor='addNewInventory__input'>
+                                <label className='addNewInventory__label label-text' htmlFor='addNewInventory__input' id='quantity-input'>
                                     Quantity
-                                    <input className='addNewInventory__input' type='text' placeholder='0'/>
+                                    <input className='addNewInventory__input' type='number' placeholder='0'/>
+                                    <label className= 'addNewInventory__input-error--hidden'>This field is required</label>
                                 </label>
                                 <label className='addNewInventory__label label-text' htmlFor='addNewInventory__input'>
                                     Warehouse
                                     <select className='addNewInventory__input-dropdown' type='text' placeholder='Please select'>
-                                        <option>test</option>
+                                        <option value='' selected disabled hidden>Please select</option>
+                                        <option value='test'>test</option>
                                     </select>
+                                    <label className= 'addNewInventory__input-error--hidden'>This field is required</label>
                                 </label>
                             </div>
                         </div>
