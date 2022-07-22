@@ -123,14 +123,18 @@ function AddNewWarehouse () {
                         </div>
                     </form>
                 </main>
-                <div className='addNewWarehouse__button-container'>
-                    <label className='addNewWarehouse__success--hidden' id='success'>Warehouse added!</label>
-                    <button className='addNewWarehouse__button-cancel button-text' type='submit' onClick={handleClick}>
-                        Cancel
-                    </button>
-                    <button className='addNewWarehouse__button-add button-text' type='submit' form='form'>
-                        + Add Warehouse
-                    </button>
+                <div className='addNewWarehouse__form-footer'>
+                    <div className='addNewWarehouse__success-container'>
+                        <label className='addNewWarehouse__success--hidden' id='success'>Warehouse added!</label>
+                    </div>
+                    <div className='addNewWarehouse__button-container'>
+                        <button className='addNewWarehouse__button-cancel button-text' type='submit' onClick={handleClick}>
+                            Cancel
+                        </button>
+                        <button className='addNewWarehouse__button-add button-text' type='submit' form='form'>
+                            + Add Warehouse
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
