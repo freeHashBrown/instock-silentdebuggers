@@ -7,6 +7,7 @@ function AddNewInventory() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        //checks if form components have a value and displays an error if they don't
         for (let i = 0; i < 3; i++) {
             const formInputs = e.target[i].value;
             
@@ -15,12 +16,6 @@ function AddNewInventory() {
                 e.target[i].nextSibling.classList.add('addNewInventory__input-error');
             } else {
                 e.target[i].nextSibling.classList.add('addNewInventory__input-error--hidden');
-                axios.post(`http://localhost:8080/inventories`, {
-                    itemName: e.target[0].value,
-                    description: e.target[1].value,
-
-                })
-                .catch(error, 'Upload failed')
             }
         }
         for(let k = 5; k < 7; k++) {
@@ -33,20 +28,56 @@ function AddNewInventory() {
                 e.target[k].nextSibling.classList.add('addNewInventory__input-error--hidden');
             }
         }
-        const radioOne = e.target[3].checked
-        const radioTwo = e.target[4].checked
-        const error = document.getElementById('radio-error')
+        const radioOne = e.target[3].checked;
+        const radioTwo = e.target[4].checked;
+        const error = document.getElementById('radio-error');
 
         if (!radioOne && !radioTwo) {
             error.classList.add('addNewInventory__input-error');
             error.classList.remove('addNewInventory__input-error--hidden');
         } else {
             error.classList.add('addNewInventory__input-error--hidden');
-            error.classList.remove('addNewInventory__input-error')
+            error.classList.remove('addNewInventory__input-error');
         }
 
-    }
+        //checks for selected radio button
+        const radioValues = document.getElementsByName('stock');
+        let selectedRadioValue = ''
+        for(let i = 0; i < radioValues.length; i++) {
+            if (radioValues[i].checked) {
+                selectedRadioValue = radioValues[i].value
+            }
+        }
 
+        //post success message
+        const message = document.getElementById('success');
+        const successMessage = () => {
+            message.classList.remove('addNewInventory__success--hidden');
+            message.classList.add('addNewInventory__success');
+        }
+        const removeSuccessMessage = () => {
+            message.classList.add('addNewInventory__success--hidden');
+            message.classList.remove('addNewInventory__success');
+        }
+
+        //checks if all form components are filled out before posting
+        if (!e.target[0].value || !e.target[1].value || !e.target[2].value || !radioOne && !radioTwo || !e.target[5].value || !e.target[6].value) {
+            removeSuccessMessage();
+        } else {
+            axios.post(`http://localhost:8080/inventories`, {
+                itemName: e.target[0].value,
+                description: e.target[1].value,
+                category: e.target[2].value,
+                status: selectedRadioValue,
+                quantity: e.target[5].value,
+                warehouseName: e.target[6].value
+            })
+            .catch(error, 'Error');
+
+            e.target.reset();
+            successMessage();
+        }
+    }
 
     return (
         <div className='addNewInventory'>
@@ -78,7 +109,13 @@ function AddNewInventory() {
                                     Category
                                     <select className='addNewInventory__input-dropdown' type='text' placeholder='Please select'>
                                         <option value='' selected disabled hidden>Please select</option>
-                                        <option value='test'>test</option>
+                                        <option value='Electronics'>Electronics</option>
+                                        <option value='Gear'>Gear</option>
+                                        <option value='Apparel'>Apparel</option>
+                                        <option value='San Fran'>San Fran</option>
+                                        <option value='Santa Monica'>Santa Monica</option>
+                                        <option value='Seattle'>Seattle</option>
+                                        <option value='Miami'>Miami</option>
                                     </select>
                                     <label className= 'addNewInventory__input-error--hidden'>This field is required</label>
                                 </label>
@@ -112,7 +149,12 @@ function AddNewInventory() {
                                     Warehouse
                                     <select className='addNewInventory__input-dropdown' type='text' placeholder='Please select'>
                                         <option value='' selected disabled hidden>Please select</option>
-                                        <option value='test'>test</option>
+                                        <option value='Manhattan'>Manhattan</option>
+                                        <option value='Washington'>Washington</option>
+                                        <option value='Jersey'>Jersey</option>
+                                        <option value='Accessories'>Accessories</option>
+                                        <option value='Health'>Health</option>
+                                        <option value='Electronics'>Electronics</option>
                                     </select>
                                     <label className= 'addNewInventory__input-error--hidden'>This field is required</label>
                                 </label>
@@ -120,13 +162,18 @@ function AddNewInventory() {
                         </div>
                     </form>
                 </main>
-                <div className='addNewInventory__button-container'>
-                    <button className='addNewInventory__button-cancel button-text' type='submit'>
-                        Cancel
-                    </button>
-                    <button className='addNewInventory__button-add button-text' type='submit' form='form'>
-                        + Add Item
-                    </button>
+               <div className='addNewInventory__form-footer'>
+                    <div className='addNewInventory__success-container'>
+                        <label className='addNewInventory__success--hidden' id='success'>Inventory added!</label>
+                    </div>
+                    <div className='addNewInventory__button-container'>
+                        <button className='addNewInventory__button-cancel button-text' type='submit'>
+                            Cancel
+                        </button>
+                        <button className='addNewInventory__button-add button-text' type='submit' form='form'>
+                            + Add Item
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

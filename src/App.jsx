@@ -14,7 +14,7 @@ function App() {
     <Router>
       <Header />
 
-      {/* <DeleteInventory/> */}
+      <AddNewInventory/>
       <Switch>
         <Redirect from='/' to='/warehouses' />
         <Route path= '/warehouses' component/>

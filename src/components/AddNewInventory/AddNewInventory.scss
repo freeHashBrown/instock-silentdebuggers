@@ -89,11 +89,17 @@
         align-items: center;
         width: 50%;
     }
+    &__form-footer {
+        background: $light-grey;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem 1.5rem;
+    }
     &__button-container {
         background: $light-grey;
         display: flex;
         justify-content: space-between;
-        padding: 1rem 1.5rem;
     }
     &__button-add, &__button-cancel {
         border-radius: 20px;
@@ -107,6 +113,20 @@
     &__button-cancel {
         color: $slate;
         background: $white;
+    }
+    &__success {
+        color: rgb(19, 129, 19);
+        font-size: 1rem;
+        order: 3;
+        padding-top: 1rem;
+    }
+    &__success-container {
+        order: 2;
+        display: flex;
+        justify-content: center;
+    }
+    &__success--hidden {
+        display: none;
     }
     #in-stock, #out-of-stock {
         margin: 0 .5rem 0 0;
@@ -157,7 +177,6 @@
         } 
         &__button-container {
             justify-content: flex-end;
-            padding-right: 2rem;
         }
         &__button-add, &__button-cancel {
             border-radius: 30px;
@@ -174,6 +193,22 @@
         }
         ::placeholder {
             font-size: .875rem;
+        }
+        &__success {
+            color: rgb(19, 129, 19);
+            font-size: 1rem;
+            padding-top: 0;
+        }
+        &__success-container {
+            display: flex;
+            align-items: center;
+            padding-left: 17rem;
+        }
+        &__success--hidden {
+            display: none;
+        }
+        &__form-footer {
+            flex-direction: row-reverse;
         }
     }
     @include desktop {
@@ -196,10 +231,15 @@
         }
         &__button-container {
             justify-content: flex-end;
-            padding-right: 2.5rem;
         }
         &__input-dropdown {
             background-position: 98% 50%;
+        }
+        &__form-footer {
+            padding: 1rem 2.5rem;
+        }
+        &__success-container {
+            padding-left: 45%;
         }
         #quantity-input {
             width: 25%;
