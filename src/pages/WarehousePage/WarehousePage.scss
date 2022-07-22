@@ -11,8 +11,7 @@
     bottom: 4rem;
 
     @include tablet {
-        bottom: 6rem;
-
+        bottom: 7rem;
     }
 
     &__header {
@@ -21,6 +20,7 @@
 
         @include tablet {
             background-color: $white;
+            padding: 2rem 1rem 1rem 1rem;
         }
 
        
@@ -29,8 +29,8 @@
     &__tablet-header {
         @include tablet {
             display: flex;
-            width: 100%;
-            background-color: $white;
+            justify-content: center;
+            padding: 0rem 1rem 0 1rem;
         }
     }
 
@@ -42,7 +42,7 @@
         border-top-right-radius: 0.2rem;
 
         @include tablet {
-            padding: 1.5rem 0 0 1rem;
+            padding: 0 0 0 0;
         }
     }
 
@@ -55,8 +55,9 @@
         @include tablet {
             flex-direction: row;
             align-items: center;
-            width: 60%;
-            padding: 1.5rem 0 0 5rem;
+            width: 80%;
+            background-color: $white;
+            padding: 2rem 2rem 0 0;
         }
        
     }
