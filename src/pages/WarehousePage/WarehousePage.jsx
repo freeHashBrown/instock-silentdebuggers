@@ -9,11 +9,15 @@ import warehouseListData from "../../assets/data/warehouses.json";
 
 class WarehousePage extends Component {
 
-    componentDidMount() {
-        let warehouseListArray = warehouseListData;
-        console.log(warehouseListArray);
+    state = {
+        warehouseListArray: warehouseListData
+    };
+
+    // componentDidMount() {
+    //     let warehouseListArray = warehouseListData;
+    //     console.log(warehouseListArray);
         
-    }
+    // }
 
 
     render() {
@@ -36,7 +40,7 @@ class WarehousePage extends Component {
                     </button>
                 </article>
                 </div>
-                <WarehouseList/>
+                <WarehouseList warehouseListArray={this.state.warehouseListArray}/>
             </main>
         );
     }

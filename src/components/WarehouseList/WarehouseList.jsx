@@ -2,8 +2,10 @@ import React from 'react';
 import "./WarehouseList.scss";
 import WarehouseItem from '../WarehouseItem/WarehouseItem';
 import sortIcon from "../../assets/icons/sort-24px.svg";
+import { v4 as uuidv4 } from 'uuid';
 
-const WarehouseList = () => {
+const WarehouseList = (props) => {
+    console.log(props);
     return (
         <article className='warehouse-list'>
             <section className='warehouse-list__header'>
@@ -38,7 +40,15 @@ const WarehouseList = () => {
                 </div>
 
             </section>
-            <WarehouseItem/>
+
+            {
+                props.warehouseListArray.map(warehouse => {
+                    return <WarehouseItem warehouse={warehouse} key={uuidv4()} />
+                })
+                    
+                
+            }
+           
         </article>
     );
 };
