@@ -1,12 +1,12 @@
 @use '../../styles/partials/colors.scss' as *;
 @use '../../styles/partials/breakpoints.scss' as *;
 
+
 .warehouse-wrapper{
     position: relative;
     padding: 1rem;
     bottom: 5rem;
 }
-
 .warehouse{
     display: flex;
     flex-direction: column;
@@ -57,10 +57,10 @@
         &-address{
             gap: 0.25rem;
         }
-        p{
-            margin: 0;
-            padding: 0;
-        }
+        // p{
+        //     margin: 0;
+        //     padding: 0;
+        // }
         &-contact{
             display: flex;
             justify-content: space-between;
@@ -79,10 +79,10 @@
         padding: 1rem;
         gap: 2rem;
         border-bottom: 1px solid $cloud;
-        p{
-            margin: 0;
-            padding: 0;
-        }
+        // p{
+        //     margin: 0;
+        //     padding: 0;
+        // }
         &-title{
             font-weight: 600;
             color: $slate;
@@ -176,9 +176,9 @@
 
 // tablet-layout
 @include tablet {
-    section{
-        padding: 2rem;
-    }
+    // section{
+    //     padding: 2rem;
+    // }
     .warehouse{
         &__header{
             padding: 2rem;
@@ -270,9 +270,9 @@
 
 // desktop-layout. Just add 2.5rem to the padding of the warehouse section
 @include desktop{
-    section{
-        padding: 0 2.5rem;
-    }
+    // section{
+    //     padding: 0 2.5rem;
+    // }
 
     .warehouse{
         
