@@ -1,12 +1,12 @@
 @use '../../styles/partials/colors.scss' as *;
 @use '../../styles/partials/breakpoints.scss' as *;
 
-// section{
-//     position: relative;
-//     padding: 1rem;
-//     bottom: 5rem;
-// }
 
+.warehouse-wrapper{
+    position: relative;
+    padding: 1rem;
+    bottom: 5rem;
+}
 .warehouse{
     display: flex;
     flex-direction: column;

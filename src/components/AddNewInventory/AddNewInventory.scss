@@ -2,7 +2,7 @@
 @use '../../styles/partials/colors' as *;
 @use '../../styles/partials/breakpoints' as *;
 
-.addNewWarehouse {
+.addNewInventory {
     padding: 0 1rem;
     background: $light-grey;
 
@@ -10,39 +10,55 @@
         background: $white;
         z-index: 1;
         position: relative;
-        top: -4.28rem;
+        top: -4rem;
         border-radius: 3px;
         box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
     }
     &__header {
         display: flex;
-        justify-content: center;
         margin: 0;
-        font-size: 1.5rem;
+        padding-left: 1.75rem;
+        padding-right: 1.5rem;
         border-bottom: 1px solid $cloud;
     }
-    &__details-warehouse {
+    &__heading {
+        margin: 2rem 0 1.5rem;
+    }
+    &__back-icon {
+        padding: 0 .75rem 2rem 0;
+    }
+    &__details-item {
         border-bottom: 1px solid $cloud;
     }
     &__details-subheading, &__form-container {
         margin: 0;
-        padding: 1rem 1.25rem 0rem;
+        padding: 1rem 1.5rem .5rem;
         display: flex;
         flex-direction: column;
     }
     &__form-container {
-        padding: 0rem 1.25rem 1.25rem;
+        padding: 0rem 1.5rem 1.25rem;
     }
     &__label {
-        padding: .75rem 0 0;
+        padding: 1rem 0 0;
         display: flex;
         flex-direction: column;
     }
-    &__input {
-        border-radius: 30px;
+    &__input, &__input-description, &__input-dropdown {
+        border-radius: 20px;
         border: 1px solid $cloud;
-        padding: .5rem .75rem;
+        padding: .5rem 1rem;
         margin-top: .25rem;
+    }
+    &__input-description {
+        padding-bottom: 5.75rem;
+    }
+    &__input-dropdown {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        padding-right: 1rem;
+        background: url('../../assets/icons/arrow_drop_down-24px.svg') no-repeat 96% 50%;
+        color: $slate;
     }
     &__input-error {
         font-size: .75rem;
@@ -58,13 +74,29 @@
     ::placeholder {
         font: .813rem 'Titillium Web';
     }
+    &__selection-label {
+        font-weight: 400;
+    }
+    &__selection-label--selected {
+        font-weight: 600;
+    }
+    &__selection-container {
+        display: flex;
+        align-items: center;
+    }
+    &__selection-option {
+        display: flex;
+        align-items: center;
+        width: 50%;
+    }
     &__button-container {
         background: $light-grey;
         display: flex;
         justify-content: space-between;
+        padding: 1rem 1.5rem;
     }
     &__button-add, &__button-cancel {
-        border-radius: 30px;
+        border-radius: 20px;
         border: 1px solid $cloud;
         padding: .45rem 0rem;
         width: 47%;
@@ -76,26 +108,8 @@
         color: $slate;
         background: $white;
     }
-    &__form-footer {
-        background: $light-grey;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 1rem 1.5rem;
-    }
-    &__success {
-        color: rgb(19, 129, 19);
-        font-size: 1rem;
-        order: 3;
-        padding-top: 1rem;
-    }
-    &__success-container {
-        order: 2;
-        display: flex;
-        justify-content: center;
-    }
-    &__success--hidden {
-        display: none;
+    #in-stock, #out-of-stock {
+        margin: 0 .5rem 0 0;
     }
     @include tablet {
         padding: 0 2rem;
@@ -111,22 +125,25 @@
             justify-content: flex-start;
             padding: 0 2rem 0;
         }
+        &__back-icon {
+            padding: 1rem .75rem 0 0;
+        }
         &__heading {
-            margin-top: 2rem;
+            margin: 2rem 0 1.3125rem;
         }
         &__details {
             display: flex;
             justify-content: center;
-            &-warehouse, &-contact {
+            &-item, &-availability {
                 margin: 1.5rem 0;
                 width: 50%;
             }
-            &-warehouse {
+            &-item {
                 border-right: 1px solid $cloud;
                 border-bottom: none;
             }
         }
-        &__details-subheading, &__form {
+        &__details-subheading {
             padding: 0 2rem .5rem;
         }
         &__form-container {
@@ -140,6 +157,7 @@
         } 
         &__button-container {
             justify-content: flex-end;
+            padding-right: 2rem;
         }
         &__button-add, &__button-cancel {
             border-radius: 30px;
@@ -157,25 +175,6 @@
         ::placeholder {
             font-size: .875rem;
         }
-        &__back-icon {
-            margin-top: 1rem;
-        }
-        &__success {
-            color: rgb(19, 129, 19);
-            font-size: 1rem;
-            padding-top: 0;
-        }
-        &__success-container {
-            display: flex;
-            align-items: center;
-            padding-left: 17rem;
-        }
-        &__success--hidden {
-            display: none;
-        }
-        &__form-footer {
-            flex-direction: row-reverse;
-        }
     }
     @include desktop {
         padding: 0 8.125rem;
@@ -183,33 +182,32 @@
         &__header {
             padding-left: 2.5rem;
         }
-        &__details-warehouse, &__details-contact {
-            margin-bottom: 1.875rem;
+        &__details-item, &__details-availability {
+            margin-bottom: 1.5rem;
         }
-        &__details-subheading, &__form {
+        &__details-subheading {
             padding: 0 2.5rem .5rem;
         }
         &__form-container {
             padding: 0 2.5rem 1.5rem;
         }
-        &__label {
-            padding: 1.5rem 0 0;
+        &__selection-container {
+            width: 50%;
         }
         &__button-container {
             justify-content: flex-end;
+            padding-right: 2.5rem;
         }
-        &__form-footer {
-            padding: 1rem 2.5rem;
+        &__input-dropdown {
+            background-position: 98% 50%;
         }
-        &__success-container {
-            padding-left: 26rem;
+        #quantity-input {
+            width: 25%;
         }
     }
 }
 
 .page-header {
-    font-size: 1.5rem;
-
     @include tablet {
         font-size: 2rem;
     }
