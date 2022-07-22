@@ -4,8 +4,18 @@ import "../../styles/partials/_typography.scss";
 import searchIcon from "../../assets/icons/search-24px.svg";
 import WarehouseList from '../../components/WarehouseList/WarehouseList';
 
+import warehouseListData from "../../assets/data/warehouses.json";
+
 
 class WarehousePage extends Component {
+
+    componentDidMount() {
+        let warehouseListArray = warehouseListData;
+        console.log(warehouseListArray);
+        
+    }
+
+
     render() {
         return (
             <main className='warehouse-page'>
