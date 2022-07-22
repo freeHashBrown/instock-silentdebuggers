@@ -4,7 +4,7 @@
 
 .warehouse-item {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     padding: 1rem 0rem 1rem 2rem;
     border-top: solid 0.1rem $cloud;
     background-color: $white;
@@ -72,9 +72,12 @@
         }
 
         &--select {
-            flex-direction: row;
 
-          
+            @include tablet {
+                flex-direction: row;
+
+            }
+          flex-direction: column;
         }
 
         

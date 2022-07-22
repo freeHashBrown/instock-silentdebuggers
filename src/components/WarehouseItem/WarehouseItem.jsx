@@ -26,7 +26,7 @@ const WarehouseItem = ({ warehouse }) => {
                         Address
                     </p>
                     <p className='warehouse-item__data body-medium'>
-                        {warehouse.address}
+                        {warehouse.address}, <br/>{warehouse.city}, {warehouse.country}
                     </p>
                 </div>
                 <img src={garbage} alt="delete" className='warehouse-item__icon'/>
