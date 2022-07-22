@@ -56,8 +56,20 @@
     &__input-dropdown {
         -webkit-appearance: none;
         -moz-appearance: none;
-        padding-right: 1.5rem;
-        background: url('../../assets/icons/arrow_drop_down-24px.svg') no-repeat 92% 50%;
+        padding-right: 1rem;
+        background: url('../../assets/icons/arrow_drop_down-24px.svg') no-repeat 96% 50%;
+        color: $slate;
+    }
+    &__input-error {
+        font-size: .75rem;
+        font-weight: 400;
+        padding-left: 1rem;
+        color: $red;
+        background: url('../../assets/icons/error-24px.svg') no-repeat 0% 50%;
+        background-size: .9rem;
+    }
+    &__input-error--hidden {
+        display: none;
     }
     ::placeholder {
         font: .813rem 'Titillium Web';
@@ -186,11 +198,16 @@
             justify-content: flex-end;
             padding-right: 2.5rem;
         }
+        &__input-dropdown {
+            background-position: 98% 50%;
+        }
+        #quantity-input {
+            width: 25%;
+        }
     }
 }
 
 .page-header {
-
     @include tablet {
         font-size: 2rem;
     }
