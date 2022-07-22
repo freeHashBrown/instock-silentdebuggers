@@ -13,13 +13,7 @@ class WarehousePage extends Component {
         warehouseListArray: warehouseListData
     };
 
-    // componentDidMount() {
-    //     let warehouseListArray = warehouseListData;
-    //     console.log(warehouseListArray);
-        
-    // }
-
-
+   
     render() {
         return (
             <main className='warehouse-page'>

@@ -6,13 +6,11 @@ import edit from "../../assets/icons/edit-24px.svg";
 
 const WarehouseItem = ({ warehouse }) => {
     
-    console.log(warehouse);
-    
-    
+
     return (
         <section className='warehouse-item'>
             <div className='warehouse-item__column warehouse-item__column--select'>
-                <div className='warehouse-item__box warehouse-item__box--select-one'>
+                <div className='warehouse-item__box warehouse-item__box--select'>
                     <p className='table-header warehouse-item__label'>
                         Warehouse
                     </p>
@@ -23,7 +21,7 @@ const WarehouseItem = ({ warehouse }) => {
                         <img src={chevron} alt="chevron" className='warehouse-item__chevron'/>
                     </div>
                 </div>
-                <div className='warehouse-item__box warehouse-item__box--select-two'>
+                <div className='warehouse-item__box '>
                     <p className=' table-header warehouse-item__label'>
                         Address
                     </p>
