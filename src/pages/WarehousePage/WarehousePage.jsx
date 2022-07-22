@@ -9,6 +9,7 @@ class WarehousePage extends Component {
     render() {
         return (
             <main className='warehouse-page'>
+                <div className='warehouse-page__tablet-header'> 
                 <header className='warehouse-page__header page-header'>
                     <h1 className='warehouse-page__title page-header'>
                         Warehouses
@@ -24,6 +25,7 @@ class WarehousePage extends Component {
                         + Add New Warehouse
                     </button>
                 </article>
+                </div>
                 <WarehouseList/>
             </main>
         );

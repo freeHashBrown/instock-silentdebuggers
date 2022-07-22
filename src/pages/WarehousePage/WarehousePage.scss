@@ -1,5 +1,7 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/colors" as *;
+@use "../../styles/partials/breakpoints" as *;
+
 
 
 .warehouse-page {
@@ -8,9 +10,28 @@
     position: relative;
     bottom: 4rem;
 
+    @include tablet {
+        bottom: 6rem;
+
+    }
+
     &__header {
         background-color: $graphite;
         padding: 0 1rem 0 1rem;
+
+        @include tablet {
+            background-color: $white;
+        }
+
+       
+    }
+
+    &__tablet-header {
+        @include tablet {
+            display: flex;
+            width: 100%;
+            background-color: $white;
+        }
     }
 
     &__title{
@@ -19,6 +40,10 @@
         margin: 0;
         border-top-left-radius: 0.2rem;
         border-top-right-radius: 0.2rem;
+
+        @include tablet {
+            padding: 1.5rem 0 0 1rem;
+        }
     }
 
     &__top {
@@ -26,6 +51,13 @@
         flex-direction: column;
         align-items: center;
         padding: 1rem 1rem 0 1rem;
+
+        @include tablet {
+            flex-direction: row;
+            align-items: center;
+            width: 60%;
+            padding: 1.5rem 0 0 5rem;
+        }
        
     }
 
@@ -60,5 +92,9 @@
         border-radius: 1.875rem;
         width: 85%;
         margin-bottom: 1.5rem;
+
+        @include tablet {
+            margin-bottom: 1rem;
+        }
     }
 }
