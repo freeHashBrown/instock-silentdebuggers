@@ -15,6 +15,7 @@ function App() {
   return (
     <Router>
       <Header />
+
       <Switch>
         <Route from='/' exact to='/warehouses' component={WarehousePage}/>
         <Route path= '/warehouses' exact component={WarehousePage}/>

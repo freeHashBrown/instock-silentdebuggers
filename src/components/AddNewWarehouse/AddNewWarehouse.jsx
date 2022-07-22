@@ -7,6 +7,18 @@ function AddNewWarehouse () {
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        //post success message
+        const message = document.getElementById('success');
+        const removeSuccessMessage = () => {
+            message.classList.add('addNewWarehouse__success--hidden');
+            message.classList.remove('addNewWarehouse__success');
+        }
+        const successMessage = () => {
+            message.classList.remove('addNewWarehouse__success--hidden');
+            message.classList.add('addNewWarehouse__success');
+        }
+
+        //checks if form components are filled out and displays error message accordingly
         for (let i=0; i < 8; i++) {
             const formInputs = e.target[i].value
             if (!formInputs) {
@@ -16,8 +28,9 @@ function AddNewWarehouse () {
                 e.target[i].nextSibling.classList.add('addNewWarehouse__input-error--hidden');
             }
         }
+        //checks if all form components are filled out before posting
         if (!e.target[0].value || !e.target[1].value || !e.target[2].value || !e.target[3].value || !e.target[4].value || !e.target[5].value || !e.target[6].value || !e.target[7].value) {
-            return
+            removeSuccessMessage();
         } else {
             axios.post(`http://localhost:8080/warehouses`, {
                 name: e.target[0].value,
@@ -32,12 +45,6 @@ function AddNewWarehouse () {
             e.target.reset();
             successMessage();
         }
-    }
-
-    const successMessage = () => {
-        const message = document.getElementById('success');
-        message.classList.remove('addNewWarehouse__success--hidden');
-        message.classList.add('addNewWarehouse__success');
     }
 
     const handleClick = () => {
