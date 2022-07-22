@@ -1,11 +1,12 @@
 import './AddNewInventory.scss';
 import backIcon from '../../assets/icons/arrow_back-24px.svg';
+import axios from 'axios';
 
 function AddNewInventory() {
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(e)
+
         for (let i = 0; i < 3; i++) {
             const formInputs = e.target[i].value;
             
@@ -14,6 +15,12 @@ function AddNewInventory() {
                 e.target[i].nextSibling.classList.add('addNewInventory__input-error');
             } else {
                 e.target[i].nextSibling.classList.add('addNewInventory__input-error--hidden');
+                axios.post(`http://localhost:8080/inventories`, {
+                    itemName: e.target[0].value,
+                    description: e.target[1].value,
+
+                })
+                .catch(error, 'Upload failed')
             }
         }
         for(let k = 5; k < 7; k++) {
