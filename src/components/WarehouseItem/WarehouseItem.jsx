@@ -3,9 +3,11 @@ import "./WarehouseItem.scss";
 import chevron from "../../assets/icons/chevron_right-24px.svg";
 import garbage from "../../assets/icons/delete_outline-24px.svg";
 import edit from "../../assets/icons/edit-24px.svg";
+import { Link } from 'react-router-dom';
 
 const WarehouseItem = ({ warehouse }) => {
     
+    console.log(warehouse.id);
 
     return (
         <section className='warehouse-item'>
@@ -14,12 +16,16 @@ const WarehouseItem = ({ warehouse }) => {
                     <p className='table-header warehouse-item__label'>
                         Warehouse
                     </p>
-                    <div className='warehouse-item__bottom'>
-                        <p className='warehouse-item__data body-medium warehouse-item__data--select'>
-                            {warehouse.city}
-                        </p>
-                        <img src={chevron} alt="chevron" className='warehouse-item__chevron'/>
-                    </div>
+                   
+                        <div className='warehouse-item__bottom'>
+                        <Link to={`/warehouses/${warehouse.id}`} className='warehouse-item__bottom'>
+                                <p className='warehouse-item__data body-medium warehouse-item__data--select'>
+                                    {warehouse.city}
+                                </p>
+                                <img src={chevron} alt="chevron" className='warehouse-item__chevron'/>
+                                </Link>
+                        </div>
+                    
                 </div>
                 <div className='warehouse-item__box '>
                     <p className=' table-header warehouse-item__label'>

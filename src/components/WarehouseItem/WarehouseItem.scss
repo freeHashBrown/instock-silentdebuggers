@@ -53,6 +53,7 @@
         align-items: center;
         justify-content: flex-start;
         width: 5rem;
+        text-decoration: none;
 
         @include tablet {
             width: 6.5rem;

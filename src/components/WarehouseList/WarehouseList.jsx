@@ -5,7 +5,7 @@ import sortIcon from "../../assets/icons/sort-24px.svg";
 
 
 const WarehouseList = (props) => {
-    console.log(props);
+  
     return (
         <article className='warehouse-list'>
             <section className='warehouse-list__header'>
