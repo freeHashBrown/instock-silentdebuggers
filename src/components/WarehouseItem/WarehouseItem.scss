@@ -25,6 +25,7 @@
     
             width: 66%;
             justify-content: space-evenly;
+            align-items: center;
         }
                &--select {
             @include tablet {
@@ -66,6 +67,7 @@
 
         @include tablet {
             width: 7rem;
+            margin: 0;
            
         }
 
