@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
       <Header />
-      {/* <AddNewInventory/> */}
+      <AddNewWarehouse/>
       {/* <DeleteInventory/> */}
       <Switch>
         <Redirect from='/' to='/warehouses' />
