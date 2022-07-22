@@ -179,3 +179,12 @@
         font-size: .875rem;
     }
 }
+.addNewWarehouse__success {
+    display: flex;
+    align-items: center;
+    padding-right: 8rem;
+    color: rgb(19, 129, 19);
+}
+.addNewWarehouse__success--hidden {
+    display: none;
+}
