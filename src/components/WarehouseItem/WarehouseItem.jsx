@@ -42,7 +42,7 @@ const WarehouseItem = ({ warehouse }) => {
                                     {warehouse.city}
                                 </p>
                                 <img src={chevron} alt="chevron" className='warehouse-item__chevron'/>
-                                </Link>
+                        </Link>
                         </div>
                     
                 </div>

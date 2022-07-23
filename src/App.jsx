@@ -12,6 +12,8 @@ import WarehousePage from './pages/WarehousePage/WarehousePage';
 import Footer from './components/Footer/Footer';
 
 
+
+
 function App() {
   return (
     <Router>
@@ -21,7 +23,7 @@ function App() {
         <Route path= '/warehouses' exact component={WarehousePage}/>
         <Route path= '/warehouses/:warehouseId' exact component={WarehouseDetails}/>
         <Route path='/inventory' exact component={InventoryListPage}/>
-        <Route path='/inventory/:inventoryId' />
+        <Route path='/inventory/:inventoryId' exact component={InventoryDe}/>
       </Switch>
       <Footer />
     </Router>
