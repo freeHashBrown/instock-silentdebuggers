@@ -8,7 +8,7 @@ import AddNewInventory from './components/AddNewInventory/AddNewInventory';
 import WarehousePage from './pages/WarehousePage/WarehousePage';
 // import DeleteInventory from './components/DeleteInventory/DeleteInventory';
 // import DeleteWarehouse from './components/DeleteWarehouse/DeleteWarehouse';
-
+import EditInventory from './components/EditInventory/EditInventory';
 
 
 function App() {
