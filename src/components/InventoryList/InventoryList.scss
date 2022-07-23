@@ -1,0 +1,38 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/breakpoints" as *;
+
+.inventory-list {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 1rem 0 1rem;
+    background-color: $light-grey;
+
+    @include desktop {
+        padding: 0 9.5rem 0 8.5rem;
+    }
+
+    &__header {
+        display: none;
+
+        @include tablet {
+            display: flex;
+            // justify-content: space-between;
+            border-top: none;
+            // padding: 0 0 0 2rem;
+            justify-content: space-evenly;
+        }
+       
+    }
+
+    &__box {
+        display: flex;
+        width: 8rem;
+        align-items: center;
+    }
+    
+    &__icon {
+        width: 1.125rem;
+        height: 1.125rem;
+    }
+}

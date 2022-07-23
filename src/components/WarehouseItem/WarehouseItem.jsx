@@ -1,15 +1,34 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./WarehouseItem.scss";
 import chevron from "../../assets/icons/chevron_right-24px.svg";
 import garbage from "../../assets/icons/delete_outline-24px.svg";
 import edit from "../../assets/icons/edit-24px.svg";
 import { Link } from 'react-router-dom';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 const WarehouseItem = ({ warehouse }) => {
-    
-    console.log(warehouse.id);
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleClick = () => setShow(true);
+    // console.log(warehouse.id);
 
     return (
+        <>
+        <Modal show={show} onHide={handleClose}>
+        <Modal.Header>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
         <section className='warehouse-item'>
             <div className='warehouse-item__column warehouse-item__column--select'>
                 <div className='warehouse-item__box warehouse-item__box--select'>
@@ -62,12 +81,13 @@ const WarehouseItem = ({ warehouse }) => {
                 <img src={edit} alt="edit" className='warehouse-item__icon warehouse-item__icon--select'/>
 
                 <div className='warehouse-item__box warehouse-item__box--select'>
-                    <img src={garbage} alt="delete" className='warehouse-item__tablet-button'/>
+                    <img src={garbage} alt="delete" className='warehouse-item__tablet-button' onClick={handleClick}/>
                     <img src={edit} alt="edit" className='warehouse-item__tablet-button'/>
                 </div>
           
             </div>
         </section>
+        </>
     );
 };
 

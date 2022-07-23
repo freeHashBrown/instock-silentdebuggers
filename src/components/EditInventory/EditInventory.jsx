@@ -1,8 +1,8 @@
-import './AddNewInventory.scss';
+import './EditInventory.scss';
 import backIcon from '../../assets/icons/arrow_back-24px.svg';
 import axios from 'axios';
 
-function AddNewInventory() {
+function EditInventory() {
     
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -85,7 +85,7 @@ function AddNewInventory() {
                 <header className='addNewInventory__header'>
                     <img className='addNewInventory__back-icon' src={backIcon} />
                     <h1 className= 'addNewInventory__heading page-header'>
-                        Add New Inventory Item
+                        Edit Inventory Item
                     </h1>
                 </header>
                 <main className='addNewInventory__details'>
@@ -139,11 +139,6 @@ function AddNewInventory() {
                                     </div>
                                     <label className= 'addNewInventory__input-error--hidden' id='radio-error'>This field is required</label>
                                 </label>
-                                <label className='addNewInventory__label label-text' htmlFor='addNewInventory__input' id='quantity-input'>
-                                    Quantity
-                                    <input className='addNewInventory__input' type='number' placeholder='0'/>
-                                    <label className= 'addNewInventory__input-error--hidden'>This field is required</label>
-                                </label>
                                 <label className='addNewInventory__label label-text' htmlFor='addNewInventory__input'>
                                     Warehouse
                                     <select className='addNewInventory__input-dropdown' type='text' placeholder='Please select'>
@@ -180,4 +175,4 @@ function AddNewInventory() {
     );
 }
 
-export default AddNewInventory;
+export default EditInventory;
