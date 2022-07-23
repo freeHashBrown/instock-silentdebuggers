@@ -15,14 +15,13 @@ function App() {
   return (
     <Router>
       <Header />
-      <AddNewInventory/>
-      {/* <Switch>
+      <Switch>
         <Route from='/' exact to='/warehouses' component={WarehousePage}/>
         <Route path= '/warehouses' exact component={WarehousePage}/>
         <Route path= '/warehouses/:warehouseId' exact component={WarehouseDetails}/>
         <Route path='/inventory' />
         <Route path='/inventory/:inventoryId' />
-      </Switch> */}
+      </Switch>
     </Router>
   );
 }
