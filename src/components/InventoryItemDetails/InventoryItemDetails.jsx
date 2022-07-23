@@ -18,6 +18,31 @@ const InventoryItemDetails = () => {
                         <img src={editIcon} alt="Edit" className='inventory-details__edit'/>
                     </section>
                 </header>
+                <section className='inventory-details__main'>
+                    <div className='inventory-details__top'>
+                        <div className='inventory-details__box'>
+                            <p className='inventory-details__label'>
+                                item description
+                            </p>
+                        </div>
+                    </div>
+                    <div className='inventory-details__bottom'>
+                        <div className='inventory-details__box'>
+
+                        </div>
+                        <div className='inventory-details__middle'>
+                            <div className='inventory-details__box'>
+
+                            </div>
+                            <div className='inventory-details__box'>
+
+                            </div>
+                        </div>
+                        <div className='inventory-details__box'>
+
+                        </div>
+                    </div>
+                </section>
             </article>
         </main>
         
