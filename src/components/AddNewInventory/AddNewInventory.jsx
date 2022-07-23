@@ -112,10 +112,9 @@ function AddNewInventory() {
                                         <option value='Electronics'>Electronics</option>
                                         <option value='Gear'>Gear</option>
                                         <option value='Apparel'>Apparel</option>
-                                        <option value='San Fran'>San Fran</option>
-                                        <option value='Santa Monica'>Santa Monica</option>
-                                        <option value='Seattle'>Seattle</option>
-                                        <option value='Miami'>Miami</option>
+                                        <option value='Accessories'>Accessories</option>
+                                        <option value='Health'>Health</option>
+                                        <option value='Electronics'>Electronics</option>
                                     </select>
                                     <label className= 'addNewInventory__input-error--hidden'>This field is required</label>
                                 </label>
@@ -152,9 +151,10 @@ function AddNewInventory() {
                                         <option value='Manhattan'>Manhattan</option>
                                         <option value='Washington'>Washington</option>
                                         <option value='Jersey'>Jersey</option>
-                                        <option value='Accessories'>Accessories</option>
-                                        <option value='Health'>Health</option>
-                                        <option value='Electronics'>Electronics</option>
+                                        <option value='San Fran'>San Fran</option>
+                                        <option value='Santa Monica'>Santa Monica</option>
+                                        <option value='Seattle'>Seattle</option>
+                                        <option value='Miami'>Miami</option>
                                     </select>
                                     <label className= 'addNewInventory__input-error--hidden'>This field is required</label>
                                 </label>
