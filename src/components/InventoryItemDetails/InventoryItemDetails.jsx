@@ -21,25 +21,51 @@ const InventoryItemDetails = () => {
                 <section className='inventory-details__main'>
                     <div className='inventory-details__top'>
                         <div className='inventory-details__box'>
-                            <p className='inventory-details__label'>
-                                item description
+                            <p className='inventory-details__label table-header'>
+                                item description:
+                            </p>
+                            <p className='inventory-details__data body-medium'>
+                                This 50", 4K LED TV 
+                                provides a crystal-clear picture and vivid colors.
                             </p>
                         </div>
                     </div>
                     <div className='inventory-details__bottom'>
                         <div className='inventory-details__box'>
-
+                            <p className='inventory-details__label table-header'>
+                                category
+                            </p>
+                            <p className='inventory-details__data body-medium'>
+                                Electronics
+                            </p>
                         </div>
                         <div className='inventory-details__middle'>
                             <div className='inventory-details__box'>
-
+                                <p className='inventory-details__label table-header'>
+                                    status:
+                                </p>
+                                <div className='inventory-details__status'>
+                                    <p className='inventory-details__highlight body-small'>
+                                        in stock
+                                    </p> 
+                                </div>
                             </div>
                             <div className='inventory-details__box'>
-
+                                <p className='inventory-details__label table-header'>
+                                    quantity:
+                                </p>
+                                <p className='inventory-details__data body-medium'>
+                                    500
+                                </p>
                             </div>
                         </div>
                         <div className='inventory-details__box'>
-
+                        <p className='inventory-details__label table-header'>
+                                warehouses:
+                            </p>
+                            <p className='inventory-details__data body-medium'>
+                                Manhattan
+                            </p>
                         </div>
                     </div>
                 </section>
