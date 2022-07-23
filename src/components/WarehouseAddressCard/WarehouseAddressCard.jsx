@@ -1,5 +1,6 @@
 import React from 'react';
 import BackLogo from '../../assets/icons/arrow_back-24px.svg'
+import { Link } from "react-router-dom";
 function WarehouseAddressCard(props) {
     const { warehouseDetails } = props;
     
@@ -8,7 +9,9 @@ function WarehouseAddressCard(props) {
             <div>
                 <div className='warehouse__header'>
                     <div className='warehouse__header-container'>
-                        <img src={BackLogo} alt="back" className='warehouse__header-return' />
+                        <Link to="/warehouses">
+                            <img src={BackLogo} alt="back" className='warehouse__header-return' />
+                        </Link>
                         <h1 className='warehouse__header-title page-header'>{warehouseDetails.name}</h1>
                     </div>
                     <div className='warehouse__header-edit'><p className='warehouse__header-edit-text button-text'>Edit</p></div>
