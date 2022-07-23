@@ -6,6 +6,10 @@
     background-color: $light-grey;
     padding: 0 1rem 0 1rem;
 
+    @include tablet {
+        padding: 0 2rem 0 2rem;
+    }
+
     &__article {
         position: relative;
         bottom: 4rem;
@@ -44,6 +48,11 @@
         justify-content: center;
         align-items: center;
         border-radius: 1.25rem;
+
+        @include tablet {
+            width: 3.1rem;
+            padding: 0 1rem 0 1rem;
+        }
         
     }
 
@@ -51,12 +60,50 @@
         width: 0.9375rem;
         height: 0.9375rem;
         background-color: $instock-indigo;
+
+       
+    }
+
+    &__text {
+        display: none;
+
+        @include tablet {
+            display: unset;
+            color: $white;
+            padding-left: 0.5rem;
+        }
     }
 
     &__main {
-        padding: 1rem 1rem 0 1rem;
+        padding: 1rem 1rem 1rem 1rem;
         display: flex;
         flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+        }
+    }
+
+    &__top {
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            padding: 0 1rem 0 1rem;
+        }
+       
+    }
+
+    &__bottom {
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            padding: 0 1rem 0 1rem;
+            border-left: 0.0625rem solid $cloud;
+        }
+      
     }
 
     &__box  {
@@ -68,6 +115,7 @@
     &__middle {
         display: flex;
         justify-content: space-between;
+        padding-right: 5rem;
     }
 
     &__label {
@@ -81,6 +129,8 @@
     &__data {
         margin: 0;
         color: $instock-black;
+        margin-top: 0.1rem;
+
     }
 
     &__status {

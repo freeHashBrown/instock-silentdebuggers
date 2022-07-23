@@ -16,6 +16,9 @@ const InventoryItemDetails = () => {
                     </div>
                     <section className='inventory-details__container'>
                         <img src={editIcon} alt="Edit" className='inventory-details__edit'/>
+                        <p className='inventory-details__text'>
+                            Edit
+                        </p>
                     </section>
                 </header>
                 <section className='inventory-details__main'>
@@ -29,8 +32,6 @@ const InventoryItemDetails = () => {
                                 provides a crystal-clear picture and vivid colors.
                             </p>
                         </div>
-                    </div>
-                    <div className='inventory-details__bottom'>
                         <div className='inventory-details__box'>
                             <p className='inventory-details__label table-header'>
                                 category
@@ -39,6 +40,8 @@ const InventoryItemDetails = () => {
                                 Electronics
                             </p>
                         </div>
+                    </div>
+                    <div className='inventory-details__bottom'>
                         <div className='inventory-details__middle'>
                             <div className='inventory-details__box'>
                                 <p className='inventory-details__label table-header'>
