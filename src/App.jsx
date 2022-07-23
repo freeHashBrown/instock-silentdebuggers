@@ -9,7 +9,8 @@ import WarehousePage from './pages/WarehousePage/WarehousePage';
 // import DeleteInventory from './components/DeleteInventory/DeleteInventory';
 // import DeleteWarehouse from './components/DeleteWarehouse/DeleteWarehouse';
 
-
+//Added a new route that will display the item details page, feel free to delete it
+import InventoryItemDetails from './components/InventoryItemDetails/InventoryItemDetails';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
 
       <Switch>
         <Route from='/' exact to='/warehouses' component={WarehousePage}/>
+        {/* This is the route I have added, feel free to remove it */}
+        <Route from = "/inventory/details" component={InventoryItemDetails}/>
+
         <Route path= '/warehouses' exact component={WarehousePage}/>
         <Route path= '/warehouses/:warehouseId' exact component={WarehouseDetails}/>
         <Route path='/inventory' />
