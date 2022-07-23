@@ -20,6 +20,10 @@
         bottom: 4rem;
         background-color: $white;
         border-radius: 0.1875rem;
+
+        @include tablet {
+            bottom: 7rem;
+        }
     }
 
     &__left {
