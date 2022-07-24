@@ -19,7 +19,7 @@ function DeleteWarehouse() {
                 </p>
             </div>
             <div className='deleteWarehouse__button-container'>
-                <button className='deleteWarehouse__button-cancel button-text' type='submit' onClick={history.goBack}>
+                <button className='deleteWarehouse__button-cancel button-text' type='button' onClick={history.goBack}>
                     Cancel
                 </button>
                 <button className='deleteWarehouse__button-delete button-text' type='submit'>

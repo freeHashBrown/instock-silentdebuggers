@@ -19,16 +19,6 @@ function EditInventory() {
                 e.target[i].nextSibling.classList.add('addNewInventory__input-error--hidden');
             }
         }
-        for(let k = 5; k < 7; k++) {
-            const quantity = e.target[k].value;
-
-            if (!quantity) {
-                e.target[k].nextSibling.classList.remove('addNewInventory__input-error--hidden');
-                e.target[k].nextSibling.classList.add('addNewInventory__input-error');
-            } else {
-                e.target[k].nextSibling.classList.add('addNewInventory__input-error--hidden');
-            }
-        }
         const radioOne = e.target[3].checked;
         const radioTwo = e.target[4].checked;
         const error = document.getElementById('radio-error');
@@ -62,15 +52,14 @@ function EditInventory() {
         }
 
         //checks if all form components are filled out before posting
-        if ((!e.target[0].value) || (!e.target[1].value) || (!e.target[2].value) || (!radioOne && !radioTwo) || (!e.target[5].value) || (!e.target[6].value)) {
+        if ((!e.target[0].value) || (!e.target[1].value) || (!e.target[2].value) || (!radioOne && !radioTwo)) {
             removeSuccessMessage();
         } else {
-            axios.post(`http://localhost:8080/inventories`, {
+            axios.put(`http://localhost:8080/inventories`, {
                 itemName: e.target[0].value,
                 description: e.target[1].value,
                 category: e.target[2].value,
                 status: selectedRadioValue,
-                quantity: e.target[5].value,
                 warehouseName: e.target[6].value
             })
             .catch(error, 'Error');
@@ -84,7 +73,7 @@ function EditInventory() {
         <div className='addNewInventory'>
             <div className='addNewInventory__card'>
                 <header className='addNewInventory__header'>
-                    <img className='addNewInventory__back-icon' src={backIcon} alt="Back"/>
+                    <img className='addNewInventory__back-icon' src={backIcon} alt="Back" onClick={history.goBack}/>
                     <h1 className= 'addNewInventory__heading page-header'>
                         Edit Inventory Item
                     </h1>
@@ -167,7 +156,7 @@ function EditInventory() {
                             Cancel
                         </button>
                         <button className='addNewInventory__button-add button-text' type='submit' form='form'>
-                            + Add Item
+                            Save
                         </button>
                     </div>
                 </div>

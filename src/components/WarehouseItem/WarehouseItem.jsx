@@ -39,7 +39,7 @@ const WarehouseItem = ({ warehouse }) => {
                         <div className='warehouse-item__bottom'>
                         <Link to={`/warehouses/${warehouse.id}`} className='warehouse-item__bottom'>
                                 <p className='warehouse-item__data body-medium warehouse-item__data--select'>
-                                    {warehouse.city}
+                                    {warehouse.name}
                                 </p>
                                 <img src={chevron} alt="chevron" className='warehouse-item__chevron'/>
                         </Link>

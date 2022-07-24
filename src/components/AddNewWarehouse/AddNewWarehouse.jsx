@@ -42,8 +42,12 @@ function AddNewWarehouse () {
                 phone: e.target[6].value,
                 email: e.target[7].value
             })
+            .catch(error => {
+                console.log(error)
+            })
             e.target.reset();
             successMessage();
+            
         }
     }
 
