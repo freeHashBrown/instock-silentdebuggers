@@ -3,8 +3,9 @@ import backIcon from '../../assets/icons/arrow_back-24px.svg';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
-function EditInventory() {
+function EditInventory(props) {
     const history = useHistory();
+    const id = props.match.params.inventoryId;
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -19,16 +20,15 @@ function EditInventory() {
                 e.target[i].nextSibling.classList.add('addNewInventory__input-error--hidden');
             }
         }
-        for(let k = 5; k < 7; k++) {
-            const quantity = e.target[k].value;
-
-            if (!quantity) {
-                e.target[k].nextSibling.classList.remove('addNewInventory__input-error--hidden');
-                e.target[k].nextSibling.classList.add('addNewInventory__input-error');
+            const dropdownInput = e.target[5].value;
+            
+            if (!dropdownInput) {
+                e.target[5].nextSibling.classList.remove('addNewInventory__input-error--hidden');
+                e.target[5].nextSibling.classList.add('addNewInventory__input-error');
             } else {
-                e.target[k].nextSibling.classList.add('addNewInventory__input-error--hidden');
+                e.target[5].nextSibling.classList.add('addNewInventory__input-error--hidden');
             }
-        }
+            
         const radioOne = e.target[3].checked;
         const radioTwo = e.target[4].checked;
         const error = document.getElementById('radio-error');
@@ -62,20 +62,18 @@ function EditInventory() {
         }
 
         //checks if all form components are filled out before posting
-        if ((!e.target[0].value) || (!e.target[1].value) || (!e.target[2].value) || (!radioOne && !radioTwo) || (!e.target[5].value) || (!e.target[6].value)) {
+        if ((!e.target[0].value) || (!e.target[1].value) || (!e.target[2].value) || (!radioOne && !radioTwo) || (!e.target[5].value)) {
             removeSuccessMessage();
         } else {
-            axios.post(`http://localhost:8080/inventories`, {
+            axios.put(`http://localhost:8080/inventories/${id}`, {
                 itemName: e.target[0].value,
                 description: e.target[1].value,
                 category: e.target[2].value,
                 status: selectedRadioValue,
-                quantity: e.target[5].value,
-                warehouseName: e.target[6].value
+                warehouseName: e.target[5].value
             })
             .catch(error, 'Error');
 
-            e.target.reset();
             successMessage();
         }
     }
@@ -84,7 +82,7 @@ function EditInventory() {
         <div className='addNewInventory'>
             <div className='addNewInventory__card'>
                 <header className='addNewInventory__header'>
-                    <img className='addNewInventory__back-icon' src={backIcon} alt="Back"/>
+                    <img className='addNewInventory__back-icon' src={backIcon} alt="Back" onClick={history.goBack}/>
                     <h1 className= 'addNewInventory__heading page-header'>
                         Edit Inventory Item
                     </h1>
@@ -167,7 +165,7 @@ function EditInventory() {
                             Cancel
                         </button>
                         <button className='addNewInventory__button-add button-text' type='submit' form='form'>
-                            + Add Item
+                            Save
                         </button>
                     </div>
                 </div>

@@ -31,10 +31,10 @@ function App() {
         <Route path='/inventory' exact component={InventoryListPage}/>
         <Route path='/inventories/:inventoryId' exact component={InventoryItemDetails}/>
         <Route path='/warehouse/delete/:warehouseId' exact component={DeleteWarehouse}/>
-        <Route path='/warehouse/edit' exact component={EditWarehouse}/>
+        <Route path='/warehouse/edit/:warehouseId' exact component={EditWarehouse}/>
         <Route path='/warehouse/add' exact component={AddNewWarehouse}/>
         <Route path='/inventory/delete/:inventoryId' exact component={DeleteInventory}/>
-        <Route path='/inventory/edit' exact component={EditInventory}/>
+        <Route path='/inventory/edit/:inventoryId' exact component={EditInventory}/>
         <Route path='/inventory/add' exact component={AddNewInventory}/>
       </Switch>
       <Footer />

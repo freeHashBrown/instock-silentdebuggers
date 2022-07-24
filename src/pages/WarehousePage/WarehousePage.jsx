@@ -18,7 +18,6 @@ class WarehousePage extends Component {
         axios
         .get("http://localhost:8080/warehouses")
         .then(result => {
-            console.log(result.data);
             this.setState({
                 warehouseListArray: result.data
             })

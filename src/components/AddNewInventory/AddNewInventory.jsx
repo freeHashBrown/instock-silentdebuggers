@@ -1,9 +1,10 @@
 import './AddNewInventory.scss';
 import backIcon from '../../assets/icons/arrow_back-24px.svg';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 function AddNewInventory() {
-    
+    const history = useHistory();
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -72,7 +73,9 @@ function AddNewInventory() {
                 quantity: e.target[5].value,
                 warehouseName: e.target[6].value
             })
-            .catch(error, 'Error');
+            .catch(error => {
+                console.log(error)
+            })
 
             e.target.reset();
             successMessage();
@@ -83,7 +86,7 @@ function AddNewInventory() {
         <div className='addNewInventory'>
             <div className='addNewInventory__card'>
                 <header className='addNewInventory__header'>
-                    <img className='addNewInventory__back-icon' src={backIcon} />
+                    <img className='addNewInventory__back-icon' src={backIcon} onClick={history.goBack}/>
                     <h1 className= 'addNewInventory__heading page-header'>
                         Add New Inventory Item
                     </h1>
@@ -167,7 +170,7 @@ function AddNewInventory() {
                         <label className='addNewInventory__success--hidden' id='success'>Inventory added!</label>
                     </div>
                     <div className='addNewInventory__button-container'>
-                        <button className='addNewInventory__button-cancel button-text' type='submit'>
+                        <button className='addNewInventory__button-cancel button-text' type='submit' onClick = {history.goBack}>
                             Cancel
                         </button>
                         <button className='addNewInventory__button-add button-text' type='submit' form='form'>

@@ -18,7 +18,7 @@ const WarehouseInventoryList = props => {
                         <p className='body-medium warehouse__stock-value warehouse__table-body-item'>{item.quantity}</p>
                         <div className='warehouse__stock-option warehouse__table-body-item'>
                             <Link to='/inventory/delete'><div className='warehouse__stock-option-delete'></div></Link>
-                            <Link to='/inventory/edit'><div className='warehouse__stock-option-edit'></div></Link>
+                            <Link to={`/inventory/edit/${item.id}`}><div className='warehouse__stock-option-edit'></div></Link>
                         </div>                  
                     </div>
 
@@ -47,7 +47,9 @@ const WarehouseInventoryList = props => {
                             <Link to='/inventory/delete'>
                                 <div className='warehouse__stock-option-delete'></div>
                             </Link>
-                            <div className='warehouse__stock-option-edit'></div>
+                            <Link to={`/inventory/edit/${item.id}`}>
+                                <div className='warehouse__stock-option-edit'></div>
+                            </Link>
                         </div>
                     </div>
             </div>
