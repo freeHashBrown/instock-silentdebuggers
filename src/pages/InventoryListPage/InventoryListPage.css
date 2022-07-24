@@ -230,6 +230,7 @@
   border-radius: 1.875rem;
   width: 85%;
   margin-bottom: 1.5rem;
+  text-decoration: none;
 }
 @media only screen and (min-width: 768px) {
   .inventory-page__button {

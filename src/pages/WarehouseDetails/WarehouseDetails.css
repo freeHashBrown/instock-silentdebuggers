@@ -39,9 +39,11 @@
      object-fit: contain;
   background-position: center;
   cursor: pointer;
+  text-decoration: none;
 }
 .warehouse__header-edit-text {
   display: none;
+  text-decoration: none;
 }
 .warehouse__header-return {
   cursor: pointer;
@@ -172,12 +174,14 @@
     background-size: 1rem;
     background-position-x: 1rem;
     margin: 0.5rem 1rem;
+    text-decoration: none;
   }
   .warehouse__header-edit-text {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     margin-right: -1rem;
+    text-decoration: none;
   }
   .warehouse__details {
     padding: 1rem 2rem;
