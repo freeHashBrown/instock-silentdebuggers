@@ -16,10 +16,13 @@
     }
     &__header {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         margin: 0;
         font-size: 1.5rem;
         border-bottom: 1px solid $cloud;
+    }
+    &__back-icon {
+        margin-top: 1.5rem;
     }
     &__details-warehouse {
         border-bottom: 1px solid $cloud;
@@ -75,6 +78,10 @@
     &__button-cancel {
         color: $slate;
         background: $white;
+        width: 100%;
+        &-link {
+            width: 47%;
+        }
     }
     &__form-footer {
         background: $light-grey;
@@ -153,12 +160,15 @@
             color: $slate;
             background: $white;
             margin-right: 1rem;
+            &-link {
+                width: auto;
+            }
         }
         ::placeholder {
             font-size: .875rem;
         }
         &__back-icon {
-            margin-top: 1rem;
+            margin-top: 2.5rem;
         }
         &__success {
             color: rgb(19, 129, 19);

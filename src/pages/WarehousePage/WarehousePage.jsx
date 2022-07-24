@@ -5,7 +5,8 @@ import searchIcon from "../../assets/icons/search-24px.svg";
 import WarehouseList from '../../components/WarehouseList/WarehouseList';
 
 import warehouseListData from "../../assets/data/warehouses.json";
-
+import AddNewWarehouse from '../../components/AddNewWarehouse/AddNewWarehouse';
+import { Link } from 'react-router-dom';
 
 class WarehousePage extends Component {
 
@@ -28,10 +29,12 @@ class WarehousePage extends Component {
                         <input type="text" placeholder='Search...' className='warehouse-page__input label-text'/>
                         <img src={searchIcon} alt="search icon" className='warehouse-page__search-icon'/>
                     </section>
-       
-                    <button className='warehouse-page__button button-text'>
-                        + Add New Warehouse
-                    </button>
+                    <Link to='/warehouses/add' className='warehouse-page__button-link'>
+                        <button className='warehouse-page__button button-text'>
+                            + Add New Warehouse
+                        </button>
+                    </Link>
+                    
                 </article>
                 </div>
                 <WarehouseList warehouseListArray={this.state.warehouseListArray}/>

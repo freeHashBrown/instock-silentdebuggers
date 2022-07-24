@@ -1,6 +1,7 @@
 import './AddNewWarehouse.scss';
 import backIcon from '../../assets/icons/arrow_back-24px.svg'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function AddNewWarehouse () {
 
@@ -55,7 +56,9 @@ function AddNewWarehouse () {
         <div className='addNewWarehouse'>
             <div className='addNewWarehouse__card'>
                 <header className='addNewWarehouse__header'>
-                    <img className='addNewWarehouse__back-icon' src={backIcon} alt='left arrow'/>
+                    <Link className='addNewWarehouse__back-icon' to= '/'>
+                        <img src={backIcon} alt='left arrow'/>
+                    </Link>
                     <h1 className= 'addNewWarehouse__heading page-header'>
                         Add New Warehouse
                     </h1>
@@ -123,9 +126,11 @@ function AddNewWarehouse () {
                         <label className='addNewWarehouse__success--hidden' id='success'>Warehouse added!</label>
                     </div>
                     <div className='addNewWarehouse__button-container'>
-                        <button className='addNewWarehouse__button-cancel button-text' type='submit' onClick={handleClick}>
-                            Cancel
-                        </button>
+                        <Link to='/' className='addNewWarehouse__button-cancel-link'>
+                            <button className='addNewWarehouse__button-cancel button-text' type='submit'>
+                                Cancel
+                            </button>
+                        </Link>
                         <button className='addNewWarehouse__button-add button-text' type='submit' form='form'>
                             + Add Warehouse
                         </button>

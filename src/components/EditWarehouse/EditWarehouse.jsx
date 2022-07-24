@@ -1,8 +1,10 @@
 import './EditWarehouse.scss';
 import backIcon from '../../assets/icons/arrow_back-24px.svg'
 
-function EditWarehouse () {
-
+function EditWarehouse (props) {
+    if (!props.show) {
+        return null
+    }
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -31,7 +33,7 @@ function EditWarehouse () {
                             <div className='EditWarehouse__form-container'>
                                 <label className='EditWarehouse__label label-text' htmlFor='EditWarehouse__input'>
                                     Warehouse Name
-                                    <input className='EditWarehouse__input' type='text' placeholder='Warehouse Name' value={"Washington"}/>
+                                    <input className='EditWarehouse__input' type='text' placeholder='Warehouse Name' value={props.warehouse.name}/>
                                 </label>
                                 <label className='EditWarehouse__label label-text' htmlFor='EditWarehouse__input'>
                                     Street Address
