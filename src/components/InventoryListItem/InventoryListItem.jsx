@@ -61,7 +61,7 @@ function InventoryListItem({inventoryListArr}) {
                     <p className='inventory__containerTab-table-p'>{item.quantity}</p>
                     <p className='inventory__containerTab-table-p'>{item.warehouseName}</p>
                     <div className='inventory__mobile-options inventory__containerTab-table-p'>
-                        <Link to='/inventory/delete'><img src={deleteLogo} alt='delete' /></Link>
+                        <Link to={`/inventory/delete/${item.id}`}><img src={deleteLogo} alt='delete' /></Link>
                         <Link to='/inventory/edit'><img src={editLogo} alt='delete' /></Link>
                     </div>
                 </div>

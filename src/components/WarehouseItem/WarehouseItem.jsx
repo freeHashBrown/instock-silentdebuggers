@@ -54,7 +54,9 @@ const WarehouseItem = ({ warehouse }) => {
                         {warehouse.address}, <br/>{warehouse.city}, {warehouse.country}
                     </p>
                 </div>
-                <img src={garbage} alt="delete" className='warehouse-item__icon'/>
+                <Link to="/inventory/delete"> 
+                    <img src={garbage} alt="delete" className='warehouse-item__icon'/>
+                </Link>
                 
             </div>
 
@@ -81,7 +83,7 @@ const WarehouseItem = ({ warehouse }) => {
                 <img src={edit} alt="edit" className='warehouse-item__icon warehouse-item__icon--select'/>
 
                 <div className='warehouse-item__box warehouse-item__box--select'>
-                    <Link to='/warehouse/delete'><img src={garbage} alt="delete" className='warehouse-item__tablet-button' onClick={handleClick}/></Link>
+                    <Link to={`/warehouse/delete/${warehouse.id}`}><img src={garbage} alt="delete" className='warehouse-item__tablet-button' onClick={handleClick}/></Link>
                     <Link to='/warehouse/edit'><img src={edit} alt="edit" className='warehouse-item__tablet-button'/></Link>
                 </div>
           
