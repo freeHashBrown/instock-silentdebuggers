@@ -1,0 +1,30 @@
+.inventory-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 0 1rem;
+  background-color: #F7F8F9;
+}
+@media only screen and (min-width: 1280px) {
+  .inventory-list {
+    padding: 0 9.5rem 0 8.5rem;
+  }
+}
+.inventory-list__header {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .inventory-list__header {
+    display: flex;
+    border-top: none;
+    justify-content: space-evenly;
+  }
+}
+.inventory-list__box {
+  display: flex;
+  width: 8rem;
+  align-items: center;
+}
+.inventory-list__icon {
+  width: 1.125rem;
+  height: 1.125rem;
+}/*# sourceMappingURL=InventoryList.css.map */
