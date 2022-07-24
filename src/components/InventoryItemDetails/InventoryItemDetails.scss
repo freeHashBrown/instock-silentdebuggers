@@ -49,6 +49,10 @@
         height: 1rem;
     }
 
+    &__link {
+        padding-top: 2rem;
+    }
+
     &__container {
         background-color: $instock-indigo;
         width: 2.25rem;
@@ -147,10 +151,12 @@
         align-items: center;
         justify-content: center;
         width: 3.8125rem;
+        width: auto;
         height: 1.5rem;
         background-color: rgba(21, 132, 99, 0.07);
         border-radius: 1.25rem;
-        padding: 0.01rem;
+        padding: 0.1rem;
+        padding: 0 0 0 0;
         margin-top: 0.1rem;
     }
 

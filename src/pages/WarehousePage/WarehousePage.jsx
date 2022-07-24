@@ -3,6 +3,7 @@ import "./WarehousePage.scss";
 import "../../styles/partials/_typography.scss";
 import searchIcon from "../../assets/icons/search-24px.svg";
 import WarehouseList from '../../components/WarehouseList/WarehouseList';
+import axios from 'axios';
 
 import warehouseListData from "../../assets/data/warehouses.json";
 
@@ -13,9 +14,21 @@ class WarehousePage extends Component {
         warehouseListArray: []
     };
     componentDidMount() {
-        this.setState({
-            warehouseListArray: warehouseListData
+
+        axios
+        .get("http://localhost:8080/warehouses")
+        .then(result => {
+            console.log(result.data);
+            this.setState({
+                warehouseListArray: result.data
+            })
         })
+        .catch(err => {
+            console.log(err);
+        })
+
+
+      
     }
 
    

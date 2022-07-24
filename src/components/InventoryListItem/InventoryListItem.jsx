@@ -1,5 +1,6 @@
+import axios from 'axios';
 import React from 'react';
-// import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import chevron from '../../assets/icons/chevron_right-24px.svg';
 import deleteLogo from '../../assets/icons/delete_outline-24px.svg';
 import editLogo from '../../assets/icons/edit-24px.svg';
@@ -9,17 +10,17 @@ import './InventoryListItem.scss';
 
 
 function InventoryListItem({inventoryListArr}) {
+
     
     const inventoryList = inventoryListArr.map(item => {
-        console.log(item);
         return (
-            <section >
+            <section key={item.id}>
                 <div className='inventory__containerMobile' key={item.id}>
                     <div className='inventory__box'>
                         <div className='inventory__box-mobile-column'>
                             <div className='inventory__mobile-column-label'>
                                 <p className='inventory__text label-text'>INVENTORY ITEM</p>
-                                <p className='inventory__text'>{item.itemName}</p>
+                                    <p className='inventory__text'>{item.itemName}</p>
                             </div>
 
                             <div className='inventory__mobile-column-label'>
@@ -52,7 +53,9 @@ function InventoryListItem({inventoryListArr}) {
                 </div>
 
                 <div className='inventory__containerTab-table'>
-                    <p className='inventory__containerTab-table-p'>{item.itemName} <img src={chevron} alt='chevron'/></p>
+                    <Link to={`/inventories/${item.id}`} className="link">
+                        <p className='inventory__containerTab-table-p'>{item.itemName} <img src={chevron} alt='chevron'/></p>
+                    </Link>
                     <p className='inventory__containerTab-table-p'>{item.category}</p>
                     <p className='inventory__containerTab-table-p'><span className='inventory-status'>{item.status}</span></p>
                     <p className='inventory__containerTab-table-p'>{item.quantity}</p>

@@ -1,17 +1,50 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
+
 import "./InventoryItemDetails.scss";
 import arrowBack from "../../assets/icons/arrow_back-24px.svg";
 import editIcon from "../../assets/icons/edit_white_24dp.svg";
+import axios from 'axios';
 
-const InventoryItemDetails = () => {
-    return (
-        <main className='inventory-details'>
+
+
+class InventoryItemDetails extends Component {
+
+    state = {
+        item: {}
+    }
+
+    componentDidMount() {
+        const inventoryId = this.props.match.params.inventoryId;
+       
+        axios
+        .get(`http://localhost:8080/inventories/${inventoryId}`)
+        .then(result => {
+    
+            this.setState({
+                item: result.data
+            })
+
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    }
+    render() {
+        if (this.state.item.id === undefined) {
+            return <div>Loading...</div>
+        } else {
+        return (
+            <main className='inventory-details'>
             <article className='inventory-details__article'>
                 <header className='inventory-details__header'>
                     <div className='inventory-details__left'>
-                        <img src={arrowBack} alt="Arrow Back" className='inventory-detials__back'/>
+                        <Link to="/inventory" className='inventory-details__link'>
+                            <img src={arrowBack} alt="Arrow Back" className='inventory-detials__back'/>
+                        </Link>
                         <h1 className='inventory-details__title page-header'>
-                        Television
+                        {this.state.item.itemName}
                         </h1>
                     </div>
                     <section className='inventory-details__container'>
@@ -28,8 +61,7 @@ const InventoryItemDetails = () => {
                                 item description:
                             </p>
                             <p className='inventory-details__data body-medium'>
-                                This 50", 4K LED TV 
-                                provides a crystal-clear picture and vivid colors.
+                            {this.state.item.description}
                             </p>
                         </div>
                         <div className='inventory-details__box'>
@@ -37,7 +69,7 @@ const InventoryItemDetails = () => {
                                 category
                             </p>
                             <p className='inventory-details__data body-medium'>
-                                Electronics
+                                {this.state.item.category}
                             </p>
                         </div>
                     </div>
@@ -49,7 +81,7 @@ const InventoryItemDetails = () => {
                                 </p>
                                 <div className='inventory-details__status'>
                                     <p className='inventory-details__highlight body-small'>
-                                        in stock
+                                        {this.state.item.status}
                                     </p> 
                                 </div>
                             </div>
@@ -58,7 +90,7 @@ const InventoryItemDetails = () => {
                                     quantity:
                                 </p>
                                 <p className='inventory-details__data body-medium'>
-                                    500
+                                    {this.state.item.quantity}
                                 </p>
                             </div>
                         </div>
@@ -74,8 +106,12 @@ const InventoryItemDetails = () => {
                 </section>
             </article>
         </main>
-        
-    );
-};
+        );
+    }
+    }
+}
 
 export default InventoryItemDetails;
+
+
+
