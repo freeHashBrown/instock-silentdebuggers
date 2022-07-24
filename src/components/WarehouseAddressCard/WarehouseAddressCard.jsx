@@ -9,12 +9,14 @@ function WarehouseAddressCard(props) {
             <div>
                 <div className='warehouse__header'>
                     <div className='warehouse__header-container'>
-                        <Link to="/warehouses">
-                            <img src={BackLogo} alt="back" className='warehouse__header-return' />
+                        <Link to="/warehouses" className='warehouse__header-return'>
+                            <img src={BackLogo} alt="back" />
                         </Link>
                         <h1 className='warehouse__header-title page-header'>{warehouseDetails.name}</h1>
                     </div>
-                    <div className='warehouse__header-edit'><p className='warehouse__header-edit-text button-text'>Edit</p></div>
+                    <Link to='/warehouse/edit' className='warehouse__header-edit'>
+                        <p className='warehouse__header-edit-text button-text'>Edit</p>
+                    </Link>
                 </div>
                 <div className='warehouse__details'>
                     <div className='warehouse__details-address'>

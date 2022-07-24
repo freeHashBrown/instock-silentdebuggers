@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap");
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../../assets/fonts/TitilliumWeb-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Titillium Web SemiBold";
+  src: url("../../assets/fonts/TitilliumWeb-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+.page-header {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+
+.sub-header {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.label-text, .button-text, .link-text {
+  font-size: 0.813rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+}
+
+.table-header {
+  font-size: 0.688rem;
+  line-height: 1rem;
+  font-weight: 400;
+}
+
+.body-large {
+  font-size: 0.938rem;
+  line-height: 1.625rem;
+  font-weight: 400;
+}
+
+.body-medium {
+  font-size: 0.813rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+
+.body-small {
+  font-size: 0.688rem;
+  line-height: 1rem;
+  font-weight: 400;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-header {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+  }
+  .sub-header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+  .label-text, .button-text, .link-text {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+  }
+  .table-header {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+  }
+  .body-large {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+  }
+  .body-medium {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+  .body-small {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .page-header {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+  }
+  .sub-header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+  .label-text, .button-text, .link-text {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+  }
+  .table-header {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+  }
+  .body-large {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+  }
+  .body-medium {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+  .body-small {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+  }
+}
+.deleteWarehouse {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem 1.5rem;
+  border-radius: 3px;
+}
+.deleteWarehouse__close-icon {
+  display: flex;
+  justify-content: flex-end;
+}
+.deleteWarehouse__heading {
+  margin: 1.5rem 0 0;
+}
+.deleteWarehouse__text {
+  margin: 1rem 0 23.8125rem;
+}
+.deleteWarehouse__button-container {
+  display: flex;
+  justify-content: space-between;
+}
+.deleteWarehouse__button-delete, .deleteWarehouse__button-cancel {
+  border-radius: 30px;
+  border: 1px solid #BDC5D5;
+  padding: 0.45rem 0rem;
+  width: 47%;
+  font-family: "Titillium Web Semibold";
+  color: #FFFFFF;
+  background: #C94515;
+}
+.deleteWarehouse__button-cancel {
+  color: #5C667E;
+  background: #FFFFFF;
+}
+@media only screen and (min-width: 768px) {
+  .deleteWarehouse {
+    padding: 1.25rem 1.25rem 2.5rem 4rem;
+    min-width: 672px;
+  }
+  .deleteWarehouse__heading {
+    margin-top: 0.25rem;
+  }
+  .deleteWarehouse__text {
+    margin: 1rem 2.5rem 2rem 0;
+  }
+  .deleteWarehouse__button-container {
+    justify-content: flex-end;
+    padding-right: 2.75rem;
+  }
+  .deleteWarehouse__button-delete, .deleteWarehouse__button-cancel {
+    width: 11%;
+    margin-left: 1rem;
+  }
+}/*# sourceMappingURL=DeleteWarehouse.css.map */

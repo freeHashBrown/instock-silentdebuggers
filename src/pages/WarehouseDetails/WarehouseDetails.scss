@@ -40,8 +40,10 @@
             object-fit: contain;
             background-position: center;
             cursor: pointer;
+            text-decoration: none;
             &-text{
                 display: none;
+                text-decoration: none;
             }
         }
         &-return{
@@ -104,10 +106,7 @@
             &-item{
                 cursor: pointer;
                 color: $instock-indigo;
-                background-image: url('../../assets/icons/chevron_right-24px.svg');
-                background-repeat: no-repeat;
-                background-position: 3.75rem;
-                background-size: 20px;
+              
                 
             }
         }
@@ -167,8 +166,11 @@
         }
     }
     &__table{
-        display: none;
+        
         &-header{
+            display: none;
+        }
+        &-body{
             display: none;
         }
     }
@@ -189,11 +191,13 @@
                 background-size: 1rem;
                 background-position-x: 1rem;
                 margin: 0.5rem 1rem;
+                text-decoration: none;
                 &-text{
                     display: flex;
                     align-items: center;
                     justify-content: flex-end;
                     margin-right: -1rem;
+                    text-decoration: none;
                 }
             }
         }

@@ -1,4 +1,4 @@
-import axios from 'axios';
+
 import React from 'react';
 import {Link} from 'react-router-dom';
 import chevron from '../../assets/icons/chevron_right-24px.svg';
@@ -61,8 +61,8 @@ function InventoryListItem({inventoryListArr}) {
                     <p className='inventory__containerTab-table-p'>{item.quantity}</p>
                     <p className='inventory__containerTab-table-p'>{item.warehouseName}</p>
                     <div className='inventory__mobile-options inventory__containerTab-table-p'>
-                        <img src={deleteLogo} alt='delete' />
-                        <img src={editLogo} alt='delete' />
+                        <Link to='/inventory/delete'><img src={deleteLogo} alt='delete' /></Link>
+                        <Link to='/inventory/edit'><img src={editLogo} alt='delete' /></Link>
                     </div>
                 </div>
             </section>

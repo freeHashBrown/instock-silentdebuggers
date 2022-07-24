@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap");
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../../assets/fonts/TitilliumWeb-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Titillium Web SemiBold";
+  src: url("../../assets/fonts/TitilliumWeb-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+.page-header {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+
+.sub-header {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.label-text, .button-text, .link-text {
+  font-size: 0.813rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+}
+
+.table-header {
+  font-size: 0.688rem;
+  line-height: 1rem;
+  font-weight: 400;
+}
+
+.body-large {
+  font-size: 0.938rem;
+  line-height: 1.625rem;
+  font-weight: 400;
+}
+
+.body-medium {
+  font-size: 0.813rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+
+.body-small {
+  font-size: 0.688rem;
+  line-height: 1rem;
+  font-weight: 400;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-header {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+  }
+  .sub-header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+  .label-text, .button-text, .link-text {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+  }
+  .table-header {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+  }
+  .body-large {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+  }
+  .body-medium {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+  .body-small {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .page-header {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+  }
+  .sub-header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+  .label-text, .button-text, .link-text {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+  }
+  .table-header {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+  }
+  .body-large {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+  }
+  .body-medium {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+  .body-small {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+  }
+}
+.warehouse-page {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 4rem;
+}
+@media only screen and (min-width: 768px) {
+  .warehouse-page {
+    bottom: 7rem;
+  }
+}
+.warehouse-page__header {
+  background-color: #232940;
+  padding: 0 1rem 0 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .warehouse-page__header {
+    background-color: #FFFFFF;
+    padding: 2rem 1rem 1rem 1rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .warehouse-page__header {
+    padding: 2rem 1rem 1rem 1rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .warehouse-page__tablet-header {
+    display: flex;
+    justify-content: center;
+    padding: 0rem 1rem 0 1rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .warehouse-page__tablet-header {
+    padding: 0 9.5rem 0 8.5rem;
+  }
+}
+.warehouse-page__title {
+  background-color: #FFFFFF;
+  padding: 2rem 0 0 1.5rem;
+  margin: 0;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+}
+@media only screen and (min-width: 768px) {
+  .warehouse-page__title {
+    padding: 0 0 0 0;
+  }
+}
+.warehouse-page__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1rem 0 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .warehouse-page__top {
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    background-color: #FFFFFF;
+    padding: 2rem 2rem 0 0;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .warehouse-page__top {
+    padding: 2rem 2rem 0 12rem;
+  }
+}
+.warehouse-page__search-bar {
+  display: flex;
+  flex-direction: row;
+  padding: 0.3rem 1rem 0.3rem 1rem;
+  width: 75%;
+  justify-content: space-between;
+  border: 0.063rem solid #5C667E;
+  border-radius: 1.875rem;
+  margin: 0 2rem 1rem 2rem;
+}
+.warehouse-page__input {
+  border: none;
+}
+.warehouse-page__input::-moz-placeholder {
+  font-weight: 400;
+}
+.warehouse-page__input:-ms-input-placeholder {
+  font-weight: 400;
+}
+.warehouse-page__input::placeholder {
+  font-weight: 400;
+}
+.warehouse-page__input:focus {
+  outline: none;
+}
+.warehouse-page__button {
+  border: none;
+  color: #FFFFFF;
+  background-color: #2E66E5;
+  padding: 0.5rem 0 0.5rem 0;
+  border-radius: 1.875rem;
+  width: 85%;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+}
+@media only screen and (min-width: 768px) {
+  .warehouse-page__button {
+    margin-bottom: 1rem;
+  }
+}/*# sourceMappingURL=WarehousePage.css.map */
