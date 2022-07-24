@@ -1,5 +1,6 @@
 import React from 'react';
-import SortLogo from '../../assets/icons/sort-24px.svg'
+import SortLogo from '../../assets/icons/sort-24px.svg';
+import { Link } from "react-router-dom";
 
 const WarehouseInventoryList = props => {
     const { inventoryData } = props;
