@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
-
 import "./InventoryItemDetails.scss";
 import arrowBack from "../../assets/icons/arrow_back-24px.svg";
 import editIcon from "../../assets/icons/edit_white_24dp.svg";
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 
 
@@ -48,7 +47,9 @@ class InventoryItemDetails extends Component {
                         </h1>
                     </div>
                     <section className='inventory-details__container'>
-                        <img src={editIcon} alt="Edit" className='inventory-details__edit'/>
+                        <Link to={`/inventory/edit/${this.props.match.params.inventoryId}`}>
+                            <img src={editIcon} alt="Edit" className='inventory-details__edit'/>
+                        </Link>
                         <p className='inventory-details__text'>
                             Edit
                         </p>

@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 const WarehouseInventoryList = props => {
     const { inventoryData } = props;
-    // console.log(inventoryData);
+
 
     const inventoryList = inventoryData.map(item => {
-        // console.log(item.itemName);
+
 
         return (
             <div key={item.id}>
@@ -17,7 +17,7 @@ const WarehouseInventoryList = props => {
                         <p className='table-header warehouse__stock-value-status warehouse__table-body-item'><span className='warehouse__stock-value-status-container'>{item.status}</span></p>
                         <p className='body-medium warehouse__stock-value warehouse__table-body-item'>{item.quantity}</p>
                         <div className='warehouse__stock-option warehouse__table-body-item'>
-                            <Link to='/inventory/delete'><div className='warehouse__stock-option-delete'></div></Link>
+                            <Link to={`/inventory/delete/${item.id}`}><div className='warehouse__stock-option-delete'></div></Link>
                             <Link to={`/inventory/edit/${item.id}`}><div className='warehouse__stock-option-edit'></div></Link>
                         </div>                  
                     </div>
@@ -26,7 +26,9 @@ const WarehouseInventoryList = props => {
                         <div className='warehouse__stock-top'>
                             <div className='warehouse__stock-top-left'>
                                 <p className='table-header warehouse__stock-title'>INVENTORY:</p>
-                                <p className='link-text warehouse__stock-value-item'>{item.itemName}</p>
+                                <Link className='link-text warehouse__stock-value-item' to= {`/inventories/${item.id}`}>
+                                    <p className='link-text warehouse__stock-value-item'>{item.itemName}</p>
+                                </Link>
                             </div>
                             <div className='warehouse__stock-top-right'>
                                 <p className='table-header warehouse__stock-title'>STATUS</p>
@@ -44,7 +46,7 @@ const WarehouseInventoryList = props => {
                             </div>
                         </div>
                         <div className='warehouse__stock-option'>
-                            <Link to='/inventory/delete'>
+                            <Link to={`/inventory/delete/${item.id}`}>
                                 <div className='warehouse__stock-option-delete'></div>
                             </Link>
                             <Link to={`/inventory/edit/${item.id}`}>

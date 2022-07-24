@@ -10,45 +10,62 @@ import './InventoryListItem.scss';
 
 
 function InventoryListItem({inventoryListArr}) {
+    console.log({inventoryListArr})
 
     
     const inventoryList = inventoryListArr.map(item => {
+        const checkStatus = () => {
+            if (item.status === 'In Stock') {
+                return true;
+            } 
+        }
+        console.log(item.status)
         return (
             <section key={item.id}>
                 <div className='inventory__containerMobile' key={item.id}>
                     <div className='inventory__box'>
                         <div className='inventory__box-mobile-column'>
                             <div className='inventory__mobile-column-label'>
-                                <p className='inventory__text label-text'>INVENTORY ITEM</p>
-                                    <p className='inventory__text'>{item.itemName}</p>
+                                <p className='inventory__text-subheading label-text'>INVENTORY ITEM</p>
+                                    <Link to={`/inventories/${item.id}`} className="link">
+                                        <p className='inventory__text-link'>{item.itemName}</p>
+                                    </Link>
                             </div>
 
                             <div className='inventory__mobile-column-label'>
-                                <p className='inventory__text label-text'>CATEGORY</p>
+                                <p className='inventory__text-subheading label-text'>CATEGORY</p>
                                 <p className='inventory__text'>{item.category}</p>
                             </div>
                         </div>
                         
                         <div className='inventory__box-mobile-column'>
                             <div className='inventory__mobile-column-label'>
-                                <p className='inventory__text label-text'>STATUS</p>
-                                <p className='inventory__text'><span className='inventory-status label-text'>{item.status}</span></p>
+                                <p className='inventory__text-subheading label-text'>STATUS</p>
+                                <p className='inventory__text'><span className= {
+                                    checkStatus(item.status)
+                                    ? 'inventory-status'
+                                    : 'inventory-status--out'
+                                }>{item.status}</span></p>
                             </div>
 
                             <div className='inventory__mobile-column-label'>
-                                <p className='inventory__text label-text'>QTY</p>
+                                <p className='inventory__text-subheading label-text'>QTY</p>
                                 <p className='inventory__text'>{item.quantity}</p>
                             </div>
 
                             <div className='inventory__mobile-column-label'>
-                                <p className='inventory__text label-text'>WAREHOUSE</p>
+                                <p className='inventory__text-subheading label-text'>WAREHOUSE</p>
                                 <p className='inventory__text'>{item.warehouseName}</p>
                             </div>
                         </div>
                     </div>
                     <div className='inventory__mobile-options'>
-                        <img src={deleteLogo} alt='delete' />
-                        <img src={editLogo} alt='delete' />
+                        <Link to={`/inventory/delete/${item.id}`}>
+                            <img src={deleteLogo} alt='delete' />
+                        </Link>
+                        <Link to={`/inventory/edit/${item.id}`}>
+                            <img src={editLogo} alt='delete' />
+                        </Link>
                     </div>
                 </div>
 

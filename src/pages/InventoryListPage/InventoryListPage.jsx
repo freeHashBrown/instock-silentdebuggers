@@ -28,7 +28,7 @@ class InventoryListPage extends Component {
 
     render() {
         const { inventoryListArray } = this.state;
-        // console.log(inventoryListArray);
+
         return (
             <main className='inventory-page'>
                 <div className='inventory-page__tablet-header'> 
@@ -44,7 +44,7 @@ class InventoryListPage extends Component {
                     </section>
        
                     <button className='inventory-page__button button-text'>
-                        <Link to='/inventory/add' className='inventory-page__button'> + Add New inventory </Link>
+                        <Link to='/inventory/add' className='inventory-page__button'> + Add New Item </Link>
                     </button>
                 </article>
                 </div>
