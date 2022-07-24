@@ -1,7 +1,9 @@
 import React from 'react';
 import BackLogo from '../../assets/icons/arrow_back-24px.svg'
 import { Link } from "react-router-dom";
+
 function WarehouseAddressCard(props) {
+    const id = props.warehouseDetails.id
     const { warehouseDetails } = props;
     
 
@@ -14,7 +16,7 @@ function WarehouseAddressCard(props) {
                         </Link>
                         <h1 className='warehouse__header-title page-header'>{warehouseDetails.name}</h1>
                     </div>
-                    <Link to='/warehouse/edit' className='warehouse__header-edit'>
+                    <Link to={`/warehouse/edit/${id}`} className='warehouse__header-edit'>
                         <p className='warehouse__header-edit-text button-text'>Edit</p>
                     </Link>
                 </div>

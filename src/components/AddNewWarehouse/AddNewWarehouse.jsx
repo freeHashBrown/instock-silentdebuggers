@@ -1,9 +1,10 @@
 import './AddNewWarehouse.scss';
 import backIcon from '../../assets/icons/arrow_back-24px.svg'
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 function AddNewWarehouse () {
-
+    const history = useHistory();
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -59,7 +60,7 @@ function AddNewWarehouse () {
         <div className='addNewWarehouse'>
             <div className='addNewWarehouse__card'>
                 <header className='addNewWarehouse__header'>
-                    <img className='addNewWarehouse__back-icon' src={backIcon} alt='left arrow'/>
+                    <img className='addNewWarehouse__back-icon' src={backIcon} alt='left arrow' onClick={history.goBack}/>
                     <h1 className= 'addNewWarehouse__heading page-header'>
                         Add New Warehouse
                     </h1>
@@ -127,7 +128,7 @@ function AddNewWarehouse () {
                         <label className='addNewWarehouse__success--hidden' id='success'>Warehouse added!</label>
                     </div>
                     <div className='addNewWarehouse__button-container'>
-                        <button className='addNewWarehouse__button-cancel button-text' type='submit' onClick={handleClick}>
+                        <button className='addNewWarehouse__button-cancel button-text' type='submit' onClick={history.goBack}>
                             Cancel
                         </button>
                         <button className='addNewWarehouse__button-add button-text' type='submit' form='form'>

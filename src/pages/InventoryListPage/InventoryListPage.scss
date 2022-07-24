@@ -80,7 +80,7 @@
         padding: 0.3rem 1rem 0.3rem 1rem;
         width: 75%;
         justify-content: space-between;
-        border: 0.063rem solid $slate;
+        border: 0.063rem solid $cloud;
         border-radius: 1.875rem;
         margin: 0 2rem 1rem 2rem;
     }
@@ -103,8 +103,8 @@
         background-color: $instock-indigo;
         padding: 0.5rem 0 0.5rem 0;
         border-radius: 1.875rem;
-        width: 85%;
-        margin-bottom: 1.5rem;
+        width: 88%;
+        margin: 0 2rem 1.5rem 2rem;
         text-decoration: none;
 
         @include tablet {

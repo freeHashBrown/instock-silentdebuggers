@@ -37,7 +37,7 @@ const WarehouseItem = ({ warehouse }) => {
                         {warehouse.address}, <br/>{warehouse.city}, {warehouse.country}
                     </p>
                 </div>
-                <Link to="/inventory/delete"> 
+                <Link to={`/warehouse/delete/${warehouse.id}`}> 
                     <img src={garbage} alt="delete" className='warehouse-item__icon'/>
                 </Link>
                 
@@ -63,8 +63,9 @@ const WarehouseItem = ({ warehouse }) => {
                         {warehouse.contact.email}
                     </p>
                 </div>
-                <img src={edit} alt="edit" className='warehouse-item__icon warehouse-item__icon--select'/>
-
+                <Link to={`/warehouse/edit/${warehouse.id}`}>
+                    <img src={edit} alt="edit" className='warehouse-item__icon warehouse-item__icon--select'/>
+                </Link>
                 <div className='warehouse-item__box warehouse-item__box--select'>
                     <Link to={`/warehouse/delete/${warehouse.id}`}><img src={garbage} alt="delete" className='warehouse-item__tablet-button'/></Link>
                     <Link to={`/warehouse/edit/${warehouse.id}`}><img src={edit} alt="edit" className='warehouse-item__tablet-button'/></Link>
