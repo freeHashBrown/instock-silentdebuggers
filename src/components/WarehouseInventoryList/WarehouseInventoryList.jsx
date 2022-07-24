@@ -17,10 +17,11 @@ const WarehouseInventoryList = props => {
                         <p className='table-header warehouse__stock-value-status warehouse__table-body-item'><span className='warehouse__stock-value-status-container'>{item.status}</span></p>
                         <p className='body-medium warehouse__stock-value warehouse__table-body-item'>{item.quantity}</p>
                         <div className='warehouse__stock-option warehouse__table-body-item'>
-                            <div className='warehouse__stock-option-delete'></div>
-                            <div className='warehouse__stock-option-edit'></div>
+                            <Link to='/inventory/delete'><div className='warehouse__stock-option-delete'></div></Link>
+                            <Link to='/inventory/edit'><div className='warehouse__stock-option-edit'></div></Link>
+                        </div>                  
                     </div>
-                {/* This is for mobile view, it will be hidden for desktop and tablet */}
+
                     <div className='warehouse__stock'>
                         <div className='warehouse__stock-top'>
                             <div className='warehouse__stock-top-left'>
@@ -43,13 +44,13 @@ const WarehouseInventoryList = props => {
                             </div>
                         </div>
                         <div className='warehouse__stock-option'>
-                            <div className='warehouse__stock-option-delete'></div>
+                            <Link to='/inventory/delete'>
+                                <div className='warehouse__stock-option-delete'></div>
+                            </Link>
                             <div className='warehouse__stock-option-edit'></div>
                         </div>
                     </div>
-
             </div>
-        </div>
           
         )
     })
@@ -64,11 +65,10 @@ const WarehouseInventoryList = props => {
                     <p className='table-header warehouse__table-title'>STATUS <img src={SortLogo} alt='sort'/></p>
                     <p className='table-header warehouse__table-title'>QUANTITY <img src={SortLogo} alt='sort'/></p>
                     <p className='table-header warehouse__table-title'>ACTIONS <img src={SortLogo} alt='sort'/></p>
-                </div>
+                </div>          
+                {inventoryList}     
+            </div>
             
-            {inventoryList}
-                
-        </div>
     </div>
     );
 };

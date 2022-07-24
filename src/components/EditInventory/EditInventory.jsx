@@ -1,9 +1,10 @@
 import './EditInventory.scss';
 import backIcon from '../../assets/icons/arrow_back-24px.svg';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 function EditInventory() {
-    
+    const history = useHistory();
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -61,7 +62,7 @@ function EditInventory() {
         }
 
         //checks if all form components are filled out before posting
-        if (!e.target[0].value || !e.target[1].value || !e.target[2].value || !radioOne && !radioTwo || !e.target[5].value || !e.target[6].value) {
+        if ((!e.target[0].value) || (!e.target[1].value) || (!e.target[2].value) || (!radioOne && !radioTwo) || (!e.target[5].value) || (!e.target[6].value)) {
             removeSuccessMessage();
         } else {
             axios.post(`http://localhost:8080/inventories`, {
@@ -83,7 +84,7 @@ function EditInventory() {
         <div className='addNewInventory'>
             <div className='addNewInventory__card'>
                 <header className='addNewInventory__header'>
-                    <img className='addNewInventory__back-icon' src={backIcon} />
+                    <img className='addNewInventory__back-icon' src={backIcon} alt="Back"/>
                     <h1 className= 'addNewInventory__heading page-header'>
                         Edit Inventory Item
                     </h1>
@@ -162,7 +163,7 @@ function EditInventory() {
                         <label className='addNewInventory__success--hidden' id='success'>Inventory added!</label>
                     </div>
                     <div className='addNewInventory__button-container'>
-                        <button className='addNewInventory__button-cancel button-text' type='submit'>
+                        <button className='addNewInventory__button-cancel button-text' type='submit' onClick={history.goBack}>
                             Cancel
                         </button>
                         <button className='addNewInventory__button-add button-text' type='submit' form='form'>

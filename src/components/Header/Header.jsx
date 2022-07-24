@@ -21,7 +21,7 @@ function Header () {
 
     return ( 
         <div className='header'>
-            <img className='header__logo' src={logo} alt='logo'/>
+            <Link to='/' exact><img className='header__logo' src={logo} alt='logo'/></Link>
             <ul className='header__nav'>
                 <li className='header__nav-item button-text' onClick={handleClick}>
                     Warehouses

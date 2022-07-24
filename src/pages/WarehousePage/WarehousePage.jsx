@@ -4,8 +4,8 @@ import "../../styles/partials/_typography.scss";
 import searchIcon from "../../assets/icons/search-24px.svg";
 import WarehouseList from '../../components/WarehouseList/WarehouseList';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
-import warehouseListData from "../../assets/data/warehouses.json";
 
 
 class WarehousePage extends Component {
@@ -48,11 +48,11 @@ class WarehousePage extends Component {
                         <section className='warehouse-page__search-bar'>
                             <input type="text" placeholder='Search...' className='warehouse-page__input label-text'/>
                             <img src={searchIcon} alt="search icon" className='warehouse-page__search-icon'/>
-                        </section>
-           
-                        <button className='warehouse-page__button button-text'>
-                            + Add New Warehouse
-                        </button>
+                        </section>                       
+                            <button className='warehouse-page__button button-text'>
+                            <Link to='/warehouse/add' className='warehouse-page__button'>+ Add New Warehouse</Link>
+                            </button>
+                        
                     </article>
                     </div>
                     <WarehouseList warehouseListArray={this.state.warehouseListArray}/>

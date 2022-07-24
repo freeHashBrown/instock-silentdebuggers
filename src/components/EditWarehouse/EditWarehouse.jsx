@@ -1,7 +1,11 @@
 import './EditWarehouse.scss';
 import backIcon from '../../assets/icons/arrow_back-24px.svg'
+import { useHistory } from "react-router-dom";
+  
 
 function EditWarehouse () {
+
+    const history = useHistory();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -14,6 +18,7 @@ function EditWarehouse () {
     }
 
     return (
+        
         <div className='EditWarehouse'>
             <div className='EditWarehouse__card'>
                 <header className='EditWarehouse__header'>
@@ -31,7 +36,7 @@ function EditWarehouse () {
                             <div className='EditWarehouse__form-container'>
                                 <label className='EditWarehouse__label label-text' htmlFor='EditWarehouse__input'>
                                     Warehouse Name
-                                    <input className='EditWarehouse__input' type='text' placeholder='Warehouse Name' value={"Washington"}/>
+                                    <input className='EditWarehouse__input' type='text' placeholder='Warehouse Name'/>
                                 </label>
                                 <label className='EditWarehouse__label label-text' htmlFor='EditWarehouse__input'>
                                     Street Address
@@ -73,7 +78,7 @@ function EditWarehouse () {
                     </form>
                 </main>
                 <div className='EditWarehouse__button-container'>
-                    <button className='EditWarehouse__button-cancel button-text' type='submit'>
+                    <button className='EditWarehouse__button-cancel button-text' type='submit' onClick={history.goBack}>
                         Cancel
                     </button>
                     <button className='EditWarehouse__button-add button-text' type='submit' form='form'>

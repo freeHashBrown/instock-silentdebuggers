@@ -3,9 +3,8 @@ import "./InventoryListPage.scss";
 import "../../styles/partials/_typography.scss";
 import searchIcon from "../../assets/icons/search-24px.svg";
 import InventoryList from '../../components/InventoryList/InventoryList';
-
-import inventoryListData from "../../assets/data/inventories.json";
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 
 class InventoryListPage extends Component {
@@ -45,7 +44,7 @@ class InventoryListPage extends Component {
                     </section>
        
                     <button className='inventory-page__button button-text'>
-                        + Add New inventory
+                        <Link to='/inventory/add' className='inventory-page__button'> + Add New inventory </Link>
                     </button>
                 </article>
                 </div>

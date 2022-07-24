@@ -104,10 +104,7 @@
             &-item{
                 cursor: pointer;
                 color: $instock-indigo;
-                background-image: url('../../assets/icons/chevron_right-24px.svg');
-                background-repeat: no-repeat;
-                background-position: 3.75rem;
-                background-size: 20px;
+              
                 
             }
         }
@@ -167,8 +164,11 @@
         }
     }
     &__table{
-        display: none;
+        
         &-header{
+            display: none;
+        }
+        &-body{
             display: none;
         }
     }

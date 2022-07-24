@@ -14,7 +14,9 @@ function WarehouseAddressCard(props) {
                         </Link>
                         <h1 className='warehouse__header-title page-header'>{warehouseDetails.name}</h1>
                     </div>
+                    <Link to='/warehouse/edit'>
                     <div className='warehouse__header-edit'><p className='warehouse__header-edit-text button-text'>Edit</p></div>
+                    </Link>
                 </div>
                 <div className='warehouse__details'>
                     <div className='warehouse__details-address'>
