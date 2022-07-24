@@ -1,0 +1,110 @@
+.warehouse-item {
+  display: flex;
+  padding: 1rem 0rem 1rem 2rem;
+  border-top: solid 0.1rem #BDC5D5;
+  background-color: #FFFFFF;
+  justify-content: space-evenly;
+  position: relative;
+}
+@media only screen and (min-width: 768px) {
+  .warehouse-item {
+    border-top: none;
+    flex-direction: row;
+    justify-content: unset;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .warehouse-item__column {
+    display: flex;
+    width: 66%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .warehouse-item__column--select {
+    width: 34%;
+    justify-content: space-between;
+  }
+}
+.warehouse-item__tablet-button {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .warehouse-item__tablet-button {
+    width: 1.125rem;
+    height: 1.125rem;
+    display: unset;
+    margin: 0 1.3rem 0 0rem;
+  }
+}
+.warehouse-item__bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 5rem;
+  text-decoration: none;
+}
+@media only screen and (min-width: 768px) {
+  .warehouse-item__bottom {
+    width: 6.5rem;
+  }
+}
+.warehouse-item__box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .warehouse-item__box {
+    width: 7rem;
+    margin: 0;
+  }
+}
+.warehouse-item__box--select {
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .warehouse-item__box--select {
+    flex-direction: row;
+  }
+}
+.warehouse-item__label {
+  font-weight: 600;
+  color: #5C667E;
+  text-transform: uppercase;
+  margin: 0 0 0.3rem 0;
+}
+@media only screen and (min-width: 768px) {
+  .warehouse-item__label {
+    display: none;
+  }
+}
+.warehouse-item__data {
+  margin: 0;
+  color: #13182C;
+  width: 7rem;
+}
+.warehouse-item__data--select {
+  color: #2E66E5;
+  font-weight: 600;
+}
+.warehouse-item__icon {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+@media only screen and (min-width: 768px) {
+  .warehouse-item__icon {
+    display: none;
+  }
+}
+.warehouse-item__icon--select {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.5rem;
+}
+.warehouse-item__chevron {
+  width: 1.125rem;
+  height: 1.125rem;
+}/*# sourceMappingURL=WarehouseItem.css.map */

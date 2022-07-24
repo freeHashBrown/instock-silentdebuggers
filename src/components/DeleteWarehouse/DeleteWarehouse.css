@@ -125,9 +125,56 @@
     font-weight: 400;
   }
 }
-body {
-  font-family: "Titillium Web";
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}/*# sourceMappingURL=App.css.map */
+.deleteWarehouse {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem 1.5rem;
+  border-radius: 3px;
+}
+.deleteWarehouse__close-icon {
+  display: flex;
+  justify-content: flex-end;
+}
+.deleteWarehouse__heading {
+  margin: 1.5rem 0 0;
+}
+.deleteWarehouse__text {
+  margin: 1rem 0 23.8125rem;
+}
+.deleteWarehouse__button-container {
+  display: flex;
+  justify-content: space-between;
+}
+.deleteWarehouse__button-delete, .deleteWarehouse__button-cancel {
+  border-radius: 30px;
+  border: 1px solid #BDC5D5;
+  padding: 0.45rem 0rem;
+  width: 47%;
+  font-family: "Titillium Web Semibold";
+  color: #FFFFFF;
+  background: #C94515;
+}
+.deleteWarehouse__button-cancel {
+  color: #5C667E;
+  background: #FFFFFF;
+}
+@media only screen and (min-width: 768px) {
+  .deleteWarehouse {
+    padding: 1.25rem 1.25rem 2.5rem 4rem;
+    min-width: 672px;
+  }
+  .deleteWarehouse__heading {
+    margin-top: 0.25rem;
+  }
+  .deleteWarehouse__text {
+    margin: 1rem 2.5rem 2rem 0;
+  }
+  .deleteWarehouse__button-container {
+    justify-content: flex-end;
+    padding-right: 2.75rem;
+  }
+  .deleteWarehouse__button-delete, .deleteWarehouse__button-cancel {
+    width: 11%;
+    margin-left: 1rem;
+  }
+}/*# sourceMappingURL=DeleteWarehouse.css.map */

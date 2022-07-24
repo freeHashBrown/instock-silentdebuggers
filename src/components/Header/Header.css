@@ -125,9 +125,57 @@
     font-weight: 400;
   }
 }
-body {
-  font-family: "Titillium Web";
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  color: #FFFFFF;
+  background: #232940;
+}
+.header__logo {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: 8rem;
+  margin: 1.5rem auto;
+}
+.header__nav {
+  display: flex;
+  list-style: none;
   padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}/*# sourceMappingURL=App.css.map */
+  margin: 0 0 5.5rem 0;
+}
+.header__nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 0.5rem 0;
+  color: #BDC5D5;
+}
+.header__nav :active, .header__nav :hover {
+  background: #13182C;
+  border-radius: 30px;
+  color: #FFFFFF;
+}
+@media only screen and (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 2rem 8rem;
+  }
+  .header__logo {
+    margin: 0;
+  }
+  .header__nav {
+    margin: 0;
+  }
+  .header__nav-item {
+    padding: 0.75rem 1.5rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .header {
+    padding: 1.5rem 8.125rem 8.125rem;
+  }
+}/*# sourceMappingURL=Header.css.map */

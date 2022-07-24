@@ -125,9 +125,56 @@
     font-weight: 400;
   }
 }
-body {
-  font-family: "Titillium Web";
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}/*# sourceMappingURL=App.css.map */
+.deleteInventory {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem 1.5rem;
+  border-radius: 3px;
+}
+.deleteInventory__close-icon {
+  display: flex;
+  justify-content: flex-end;
+}
+.deleteInventory__heading {
+  margin: 1.5rem 0 0;
+}
+.deleteInventory__text {
+  margin: 1rem 0 23.8125rem;
+}
+.deleteInventory__button-container {
+  display: flex;
+  justify-content: space-between;
+}
+.deleteInventory__button-delete, .deleteInventory__button-cancel {
+  border-radius: 30px;
+  border: 1px solid #BDC5D5;
+  padding: 0.45rem 0rem;
+  width: 47%;
+  font-family: "Titillium Web Semibold";
+  color: #FFFFFF;
+  background: #C94515;
+}
+.deleteInventory__button-cancel {
+  color: #5C667E;
+  background: #FFFFFF;
+}
+@media only screen and (min-width: 768px) {
+  .deleteInventory {
+    padding: 1.25rem 1.25rem 2.5rem 4rem;
+    min-width: 672px;
+  }
+  .deleteInventory__heading {
+    margin-top: 0.25rem;
+  }
+  .deleteInventory__text {
+    margin: 1rem 2.5rem 2rem 0;
+  }
+  .deleteInventory__button-container {
+    justify-content: flex-end;
+    padding-right: 2.75rem;
+  }
+  .deleteInventory__button-delete, .deleteInventory__button-cancel {
+    width: 11%;
+    margin-left: 1rem;
+  }
+}/*# sourceMappingURL=DeleteInventory.css.map */

@@ -1,0 +1,60 @@
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+
+
+
+.deleteInventory {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem 1.5rem;
+    border-radius: 3px;
+
+    &__close-icon {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__heading {
+        margin: 1.5rem 0 0;
+    }
+    &__text {
+        margin: 1rem 0 23.8125rem;
+    }
+    &__button-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__button-delete, &__button-cancel {
+        border-radius: 30px;
+        border: 1px solid $cloud;
+        padding: .45rem 0rem;
+        width: 47%;
+        font-family: 'Titillium Web Semibold';
+        color: $white;
+        background: $red;
+    }
+    &__button-cancel {
+        color: $slate;
+        background: $white;
+    }
+    @include tablet {
+        padding: 1.25rem 1.25rem 2.5rem 4rem;
+        min-width: 672px;
+
+        &__heading {
+            margin-top: .25rem;
+        }
+        &__text {
+            margin: 1rem 2.5rem 2rem 0;
+        }
+        &__button-container {
+            justify-content: flex-end;
+            padding-right: 2.75rem;
+        }
+        &__button-delete, &__button-cancel {
+            width: 11%;
+            margin-left: 1rem;
+        }
+    }
+}

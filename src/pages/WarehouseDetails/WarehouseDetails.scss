@@ -1,0 +1,303 @@
+@use '../../styles/partials/colors.scss' as *;
+@use '../../styles/partials/breakpoints.scss' as *;
+
+
+.warehouse-wrapper{
+    position: relative;
+    padding: 1rem;
+    bottom: 5rem;
+}
+.warehouse{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 3px;
+    background-color: $white;
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid $cloud;
+        padding: 1rem;
+        
+        &-title{
+            padding: 0;
+            margin: 0;
+        }
+        &-container{
+            display: flex;
+            gap: 0.75rem;
+        }
+        &-edit{
+            background-color: $instock-indigo;
+            color: white;
+            border-radius: 20px;
+            height: 2.25rem;
+            width: 2.25rem;
+            background-image: url('../../assets/icons/edit_white_24dp.svg');
+            background-size: 60%;
+            background-repeat: no-repeat;
+            object-fit: contain;
+            background-position: center;
+            cursor: pointer;
+            text-decoration: none;
+            &-text{
+                display: none;
+                text-decoration: none;
+            }
+        }
+        &-return{
+            cursor: pointer;
+        }
+    }
+    &__details{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 2rem;
+        border-bottom: 1px solid $cloud;
+        &-address{
+            gap: 0.25rem;
+        }
+        // p{
+        //     margin: 0;
+        //     padding: 0;
+        // }
+        &-contact{
+            display: flex;
+            justify-content: space-between;
+        }
+        &-title{
+            font-weight: 600;
+            color: $slate;
+        }
+        &-value{
+            color: $instock-black;
+        }
+    }
+    &__stock{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 2rem;
+        border-bottom: 1px solid $cloud;
+        // p{
+        //     margin: 0;
+        //     padding: 0;
+        // }
+        &-title{
+            font-weight: 600;
+            color: $slate;
+        }
+        &-value{
+            color: $instock-black;
+            
+            &-status{
+                background-color: rgba(21, 132, 99, 0.07);
+                color: $green;
+                border-radius: 20px;
+                width: max-content;
+                &-container{
+                    text-align: center;
+                    font-weight: 600;
+                    padding: 4px 8px;
+                }
+            }
+            &-item{
+                cursor: pointer;
+                color: $instock-indigo;
+                text-decoration: none;
+            }
+        }
+        &-top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            &-left{
+                justify-self: flex-start;
+                width: 50%;
+            }
+            &-right{
+                justify-self: flex-start;
+                width: 50%;
+            }
+        }
+        &-bottom{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            &-left{
+                justify-self: flex-start;
+                width: 50%;
+            }
+            &-right{
+                justify-self: flex-start;
+                width: 50%;
+            }
+        }
+        &-option{
+            display: flex;
+            justify-content: space-between;
+            &-delete{
+                border-radius: 20px;
+                height: 2.25rem;
+                width: 2.25rem;
+                background-image: url('../../assets/icons/delete_outline-24px.svg');
+                background-size: 60%;
+                background-repeat: no-repeat;
+                object-fit: contain;
+                background-position: center;
+                cursor: pointer;
+            }
+            &-edit{
+                border-radius: 20px;
+                height: 2.25rem;
+                width: 2.25rem;
+                background-image: url('../../assets/icons/edit-24px.svg');
+                background-size: 60%;
+                background-repeat: no-repeat;
+                object-fit: contain;
+                background-position: center;
+                cursor: pointer;
+            }
+        }
+    }
+    &__table{
+        
+        &-header{
+            display: none;
+        }
+        &-body{
+            display: none;
+        }
+    }
+}
+
+// tablet-layout
+@include tablet {
+    // section{
+    //     padding: 2rem;
+    // }
+    .warehouse{
+        &__header{
+            padding: 2rem;
+            &-edit{
+                display: flex;
+                justify-content: space-around;
+                width: 5.063rem;
+                background-size: 1rem;
+                background-position-x: 1rem;
+                margin: 0.5rem 1rem;
+                text-decoration: none;
+                &-text{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    margin-right: -1rem;
+                    text-decoration: none;
+                }
+            }
+        }
+        &__details{
+            padding: 1rem 2rem;
+            flex-direction: row;
+            align-content: center;
+            
+            &-value{
+                width: 8rem;
+            }
+            &-address{
+                flex-direction: column;
+                gap: 1rem;
+                padding: 0 2rem 0 0;
+            }
+            &-contact{
+                gap: 3rem;
+                border-left: 1px solid $cloud;
+                padding: 0 2rem;
+                
+            }
+        }
+        &__stock{
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            display: none;
+        }
+        &__table{
+            display: flex;
+            flex-direction: column;
+            &-header{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 1rem 2rem;
+                border-bottom: 1px solid $cloud;
+                background-color: rgba(247, 248, 249, 0.7);
+                
+            }
+            &-title{
+                padding: 0;
+                margin: 0;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $slate;
+                font-weight: 600;
+                img{
+                    width: 1.5rem;
+                    height: 1rem;
+                    margin-right: 0.25rem;
+                };
+            }
+            &-body{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 2rem;
+                border-bottom: 1px solid $cloud;
+                &-item{
+                    display: flex;
+                    justify-self: flex-start;
+                    align-items: center;
+                }
+            }
+
+        }
+    }
+}
+
+// desktop-layout. Just add 2.5rem to the padding of the warehouse section
+@include desktop{
+    // section{
+    //     padding: 0 2.5rem;
+    // }
+
+    .warehouse{
+        
+        &__header{
+            padding: 2rem 2.5rem;
+        }
+        &__details{
+            padding: 1rem 2.5rem;
+            justify-content: flex-start;
+            &-address{
+                padding: 0 15rem 0 0;
+            }
+        }
+
+        &__table{
+            &-header{
+                padding: 1rem 2.5rem;
+            }
+            &-body{
+                padding: 1rem 2.5rem;
+            }
+        }
+        
+    }
+}
