@@ -54,7 +54,9 @@ const WarehouseItem = ({ warehouse }) => {
                         {warehouse.address}, <br/>{warehouse.city}, {warehouse.country}
                     </p>
                 </div>
-                <img src={garbage} alt="delete" className='warehouse-item__icon'/>
+                <Link to="/inventory/delete"> 
+                    <img src={garbage} alt="delete" className='warehouse-item__icon'/>
+                </Link>
                 
             </div>
 

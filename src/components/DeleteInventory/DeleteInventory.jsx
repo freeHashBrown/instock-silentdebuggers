@@ -8,7 +8,9 @@ function DeleteInventory() {
     return (
         <div className='deleteInventory'>
             <div className='deleteInventory__close-icon'>
-                <img src={closeButton} alt='x icon'/>
+               
+                    <img src={closeButton} alt='x icon' onClick={history.goBack}/>
+              
             </div>
             <div className='deleteInventory__text-container'>
                 <h1 className='deleteInventory__heading page-header'>
