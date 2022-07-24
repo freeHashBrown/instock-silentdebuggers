@@ -2,39 +2,34 @@ import './DeleteInventory.scss';
 import closeButton from '../../../src/assets/icons/close-24px.svg';
 import { Link, useHistory } from 'react-router-dom';
 import axios from 'axios';
-import React, { Component } from 'react';
+import React from 'react';
 
 
 
-class DeleteInventory extends Component {
+const DeleteInventory = ( props ) => {
+
+    const history = useHistory();
+    const id = props.match.params.inventoryId;
 
 
-    handleDelete = () => {
-
-        const id  = this.props.match.params.inventoryId;
-        
-
+    const handleDelete = () => {
+       
         axios
         .delete(`http://localhost:8080/inventories/${id}`)
         .then(result => {
-            alert("Item has been deleted");
-            
+            alert("Inventory Item has been deleted");
         })
         .catch(err => {
             console.log(err);
         })
-
     }
 
-
-    render() {
-
-        return (
-            <div className='deleteInventory'>
+    return (
+        <div className='deleteInventory'>
             <div className='deleteInventory__close-icon'>
-                <Link to="/inventory">
-                    <img src={closeButton} alt='x icon' />
-                </Link>
+                
+                    <img src={closeButton} alt='x icon' onClick={history.goBack}/>
+                
             </div>
             <div className='deleteInventory__text-container'>
                 <h1 className='deleteInventory__heading page-header'>
@@ -45,22 +40,21 @@ class DeleteInventory extends Component {
                 </p>
             </div>
             <div className='deleteInventory__button-container'>
-                <Link to="/inventory" className='remove-styling'>
-                    <button className='deleteInventory__button-cancel button-text' type='submit' >
+                
+                    <button className='deleteInventory__button-cancel button-text' type='submit' onClick={history.goBack}>
                         Cancel
                     </button>
-                </Link>
+             
                 
-                {/* <Link>  */}
-                <button className='deleteInventory__button-delete button-text' type='submit' onClick={this.handleDelete}>
+                
+                <button className='deleteInventory__button-delete button-text' type='submit' onClick={handleDelete}>
                     Delete
                 </button>
-                {/* </Link> */}
+               
                
             </div>
         </div>
-        );
-    }
-}
+    );
+};
 
 export default DeleteInventory;
