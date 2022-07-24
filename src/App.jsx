@@ -33,7 +33,7 @@ function App() {
         <Route path='/warehouse/delete' exact component={DeleteWarehouse}/>
         <Route path='/warehouse/edit' exact component={EditWarehouse}/>
         <Route path='/warehouse/add' exact component={AddNewWarehouse}/>
-        <Route path='/inventory/delete' exact component={DeleteInventory}/>
+        <Route path='/inventory/delete/:inventoryId' exact component={DeleteInventory}/>
         <Route path='/inventory/edit' exact component={EditInventory}/>
         <Route path='/inventory/add' exact component={AddNewInventory}/>
       </Switch>
