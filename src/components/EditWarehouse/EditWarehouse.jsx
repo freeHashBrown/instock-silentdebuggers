@@ -4,10 +4,10 @@ import { useHistory } from "react-router-dom";
 import axios from 'axios'
   
 
-function EditWarehouse () {
+function EditWarehouse (props) {
 
     const history = useHistory();
-
+    const id = props.match.params.warehouseId;
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -23,7 +23,7 @@ function EditWarehouse () {
         if (!e.target[0].value || !e.target[1].value || !e.target[2].value || !e.target[3].value || !e.target[4].value || !e.target[5].value || !e.target[6].value || !e.target[7].value) {
             return
         } else {
-            axios.put(`http://localhost:8080/warehouses`, {
+            axios.put(`http://localhost:8080/warehouses/${id}`, {
                 name: e.target[0].value,
                 address: e.target[1].value,
                 city: e.target[2].value,
