@@ -30,7 +30,7 @@ function App() {
         <Route path= '/warehouses/:warehouseId' exact component={WarehouseDetails}/>
         <Route path='/inventory' exact component={InventoryListPage}/>
         <Route path='/inventories/:inventoryId' exact component={InventoryItemDetails}/>
-        <Route path='/warehouse/delete' exact component={DeleteWarehouse}/>
+        <Route path='/warehouse/delete/:warehouseId' exact component={DeleteWarehouse}/>
         <Route path='/warehouse/edit' exact component={EditWarehouse}/>
         <Route path='/warehouse/add' exact component={AddNewWarehouse}/>
         <Route path='/inventory/delete/:inventoryId' exact component={DeleteInventory}/>
