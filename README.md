@@ -45,6 +45,7 @@ REACT_APP_INVENTORY_ENDPOINT = https://localhost:8080/inventories
 ```
 ## Deployment
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6430e311-3b8d-4f7a-8aec-bdcb672e4c0f/deploy-status)](https://app.netlify.com/sites/instock7/deploys)
+
 The frontend has been deployed on netlify - https://instock7.netlify.app/
 
 And the server has been deployed on heroku with JawsDB provisioning the DB.
