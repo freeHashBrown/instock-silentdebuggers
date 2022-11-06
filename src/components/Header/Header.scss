@@ -1,0 +1,79 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/global" as *;
+
+.header-background {
+  background-color: $color-background-graphite;
+  height: 11rem;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+
+  @include desktop {
+    height: 11.5rem;
+  }
+}
+
+.nav {
+  box-sizing: border-box;
+  padding: 1.2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablet {
+    flex-direction: row;
+    padding: 2rem 2.5rem;
+    justify-content: center;
+  }
+
+  @include desktop {
+    padding: 2rem 8rem;
+  }
+
+  &__page-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include tablet {
+      margin-top: -0.78rem;
+      margin-left: 56%;
+    }
+
+    @include desktop {
+      margin-left: 42rem;
+    }
+  }
+
+  &__link {
+    margin: 4% 0 0;
+    padding: 0.45rem 2.6rem;
+    border-radius: 20px;
+
+    @include tablet {
+      padding: 0.45rem 1.1rem;
+    }
+
+    &:hover {
+      color: $color-primary-white;
+      text-decoration: underline;
+    }
+  }
+
+  &__link-active {
+    color: $color-primary-white;
+    background-color: $color-primary-black;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__link-title {
+    padding: 0;
+    margin: 0;
+  }
+}
