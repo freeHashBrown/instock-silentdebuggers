@@ -57,3 +57,4 @@ And the server has been deployed on heroku with JawsDB provisioning the DB.
 ![App Screenshot](https://i.imgur.com/iZaJjl4.png)
 
 ![App Screenshot](https://i.imgur.com/ZjJ3iZF.png)
+
