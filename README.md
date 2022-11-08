@@ -1,7 +1,8 @@
-# InStock Client
+# [InStock App](https://instock7.netlify.app/warehouse)
 
-An Inventory Management System for a client that maintains a list of warehouses. The app has full CRUD functionality. Built by a team of three web developers using Agile methodology and daily scrums.
+An Inventory Management System for a client that maintains a growing chain of warehouses. The app has full CRUD functionality. Built by a team of three web developers using Agile methodology and daily scrums.
 Built with MVC pattern in mind. Source of data is a MySQL database. Using knex.js to interact with the db. 
+
 A [backend-end server](https://github.com/jpatel98/instock-api-silentdebuggers) accompanies this app.
 
 ## Tech Stack
